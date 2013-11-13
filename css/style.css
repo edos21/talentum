@@ -5,10 +5,11 @@
 }
 body {
   background-color:#F2F2F2; 
+  -ms-touch-action: none;
 }
-.contcolor1 {
+/*.contcolor1 {
 
-  height:500px;
+  height:auto;
   background: rgb(0,0,0);
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OCUiIHN0b3AtY29sb3I9IiNmMmYyZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top,  rgba(0,0,0,1) 43%, rgba(242,242,242,1) 98%);
@@ -19,14 +20,14 @@ body {
   background: linear-gradient(to bottom,  rgba(0,0,0,1) 43%,rgba(242,242,242,1) 98%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#f2f2f2',GradientType=0 );
   
-}
+}*/
 
 .cuadro360 {
   margin-top:30px;
   margin-bottom:20px;
   position:relative;
   box-shadow: 0 0 10px gray;
-  
+  height:395px;
 }
 .cuadro360 > .sombra {
   position:absolute;
@@ -38,7 +39,13 @@ body {
   box-shadow: 0 0 6px black;
   background-color:#F2F2F2;
   margin-top: 30px;
-  height:auto;  
+  height:auto;
+  padding-top:20px;  
+
+}
+
+.ContContacto {
+  margin-top: 200px;  
 }
 .txtPrincipal{
   width:800px;
@@ -221,4 +228,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 .MenuAdmin > li{
   padding: 10px;
+}
+.ContactFoto {
+  position:absolute;
+  top: -220px;
+  left: 30px;
+  border-radius:50
+  
+}
+
+.ContContact {
+  position:relative;
+  height:500px;
+  background: rgb(149, 149, 149);
+}
+
+.ContSubcategoriaMini {
+  margin-top:20px;
+}
+/*.ContContacto2 {
+  position:relative;
+}
+.ContContacto2 > div {
+  position:absolute;
+  bottom: -225px;
+  left: 110px;
+  }*/
+
+
+.ContSubcategoriaMed .grid_2 img {
+  margin-bottom:10px;
 }
