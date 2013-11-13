@@ -1,0 +1,113 @@
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	height: 30px;
+	background-color: black;
+}
+
+.menu li {
+	float: left;
+	position: relative;
+}
+
+.menu a {
+	-webkit-transition: all 600ms ease;
+	-moz-transition: all 600ms ease;
+	-o-transition: all 600ms ease;
+	-ms-transition: all 600ms ease;
+	transition: all 600ms ease;
+	display: inline-block;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 20px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	border-left: 1px solid #71b0c3;
+	border-right: 1px solid #7174c3;
+	text-shadow: 0 0 3px #2f52b2; 
+}
+
+
+.menu li:first-child a {
+	border-left: none;
+	border-top: none;
+}
+
+.menu li:last-child a {
+	border-right: none;
+	border-bottom: none;
+
+}
+
+.menu a:hover {
+	background-color: black;
+}
+
+.menu.menu-v {
+	height: auto;
+}
+
+.menu.menu-v li {
+	float: none;
+}
+
+.menu.menu-v a {
+	display: block;
+	border-top: 1px solid #71b0c3;
+	border-bottom: 1px solid #7174c3;
+	border-left: none;
+	border-right: none;
+}
+
+.menu .submenu {
+	transition: all 400ms ease;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 200px;
+	z-index: 1000;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	background-color: gray;
+}
+
+.menu .submenu li {
+	float: none;
+}
+
+.menu .submenu a {
+	display: block;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+.menu li:hover > .submenu {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
