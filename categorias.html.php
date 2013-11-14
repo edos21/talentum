@@ -52,8 +52,8 @@
           <nav class="barraNav">
             <ul>
               <li><a href="index.html">Inicio</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="categorias.html.php">Productos</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </nav>
           <div class="row oro">
@@ -62,7 +62,9 @@
             </div>
           <div class="precioro">
             <p>Precio del Oro</p>
-            <p>99999,99 $</p>
+            <p>99999,99 $
+            <img src="img/FlechaArriba.png" alt="">
+            </p>
           </div>
           </div>
         </div> 
@@ -70,19 +72,15 @@
     </div>
   </header>
   
-  <br>
-    <div class="slider">
-      <img src="img/slider.jpg" alt="">
-    </div>
 
-  
   <div class="container_12 contenedorprincipal">
+    <h2 class="TextCategoria">Categorias</h2>
     <?php foreach($categorias as $categoria): ?>
-    <div class="grid_3">
+    <div class="grid_2">
       <div class="ContCatg">
         
           <img src="img/<?php echo $categoria['img'] ?>" alt="">
-        <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>">
+        <a href="subcategoria.html.php/?id=<?php echo $categoria['id'] ?>">
         <div class="ContCatgTxt">
           <p><?php echo $categoria['nombre'] ?></p>
         </div>
