@@ -22,6 +22,21 @@
 <html>
 	<head>
 		<title>Talemtum Joyas | Articulos</title>
+		<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript">
+		function recargarSub(val){
+ 
+			   $('#subcategoria').html('<option value="">Cargando...</option>');
+
+			   $.ajax({
+					url: 'cargarSub.php',
+					data: 'id='+val,
+					success: function(resp){
+					 $('#subcategoria').html(resp)
+					 }
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<div id="content">
@@ -33,20 +48,19 @@
 				<label for="descripcion">Descripcion</label>
 				<textarea name="descripcion" id="descripcion"></textarea>
 				<label for="categoria">Categoria</label>
-				<select name="categoria" id="categoria">
-					<option>Seleccione...</option>
+				<select onChange="recargarSub(this.value)" name="categoria" id="categoria">
+					<option value="">Seleccione...</option>
 					<?php foreach($categorias as $categoria): ?>
 						<option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nombre'] ?></option>
 					<?php endforeach; ?>
 				</select>
+
 				<label for="subcategoria">SubCategoria</label>
 				<select name="subcategoria" id="subcategoria">
-					<option>Seleccione...</option>
-					<optgroup>
-					</optgroup>
+					<option value="">Seleccione...</option>
 				</select>
-				<label for="precio">Precio</label>
-				<input type="precio" id="precio" name="precio">
+				<label for="peso">Peso</label>
+				<input type="peso" id="peso" name="peso">
 				<label for="foto1">Foto 1</label>
 				<input type="file" name="foto1" id="foto1">
 				<label for="joya1">Joya 1</label>
