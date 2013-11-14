@@ -4,7 +4,7 @@
 
   try{
 
-    $sql = 'SELECT * FROM subcategoria where idCategoria=:idcategoria';
+    $sql = 'SELECT subcategoria.id, subcategoria.subnombre, subcategoria.img, categoria.nombre FROM subcategoria INNER JOIN categoria ON categoria.id = subcategoria.idcategoria WHERE idCategoria=:idcategoria';
 
     $s = $pdo->prepare($sql);
     $s->bindValue(':idcategoria', $_GET['categoria']);
@@ -14,7 +14,8 @@
       $subcategorias[]= array(
         'id'=>$row['id'],
         'subnombre'=>$row['subnombre'],
-        'img'=>$row['img']);
+        'img'=>$row['img'],
+        'nombre'=>$row['nombre']);
     }
   }
   catch(PDOException $e){
@@ -52,8 +53,8 @@
         <div class="grid_4 push_4">
           <nav class="barraNav">
             <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="#">Productos</a></li>
+              <li><a href="./">Inicio</a></li>
+              <li><a href="categorias.html.php">Productos</a></li>
               <li><a href="#">Contacto</a></li>
             </ul>
           </nav>
@@ -70,18 +71,14 @@
       </div>
     </div>
   </header>
-  
-  <br>
-    <div class="slider">
-      <img src="img/slider.jpg" alt="">
-    </div>
 
   
   <div class="container_12 contenedorprincipal">
+  <h2 class="TextCategoria"><?php echo $subcategorias[0]['nombre'] ?></h2>
     <?php
     if (count($subcategorias) > 0){
       foreach($subcategorias as $subcategoria): ?>
-      <div class="grid_3">
+      <div class="grid_2">
         <div class="ContCatg">
           
             <img src="img/<?php echo $subcategoria['img'] ?>" alt="">
@@ -119,10 +116,10 @@
           Sitemap
         </p>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Portafolio</a></li>
+          <li><a href="./">Inicio</a></li>
+          <li><a href="categorias.html.php">Productos</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="#">Admin</a></li>
+          <li><a href="backend/menu.html.php">Admin</a></li>
         </ul>
       </div>
       <div class="grid_3 txtfooter">

@@ -51,8 +51,8 @@
         <div class="grid_4 push_4">
           <nav class="barraNav">
             <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="categorias.html.php">Productos</a></li>
+              <li><a href="./">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
               <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </nav>
@@ -80,7 +80,7 @@
       <div class="ContCatg">
         
           <img src="img/<?php echo $categoria['img'] ?>" alt="">
-        <a href="subcategoria.html.php/?id=<?php echo $categoria['id'] ?>">
+        <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>">
         <div class="ContCatgTxt">
           <p><?php echo $categoria['nombre'] ?></p>
         </div>
@@ -107,10 +107,10 @@
           Sitemap
         </p>
         <ul>
-          <li><a href="#">Inicio</a></li>
+          <li><a href="./">Inicio</a></li>
           <li><a href="#">Portafolio</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="#">Admin</a></li>
+          <li><a href="backend/menu.html.php">Admin</a></li>
         </ul>
       </div>
       <div class="grid_3 txtfooter">
