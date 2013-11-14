@@ -90,7 +90,7 @@
     <?php endforeach; ?>
   </div>
   <footer>
-    <div class="container_12 contfooter colordegradado">
+    <div class="container_12 contfooter colordegradado2">
       <img src="img/anillos.png" alt="" class="anillofooter">
       <div class="grid_3 txtfooter">
         <p>
