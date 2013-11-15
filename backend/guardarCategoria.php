@@ -3,8 +3,8 @@
 	include '../lib/conexion.php';
 
 	$nombre = $_POST['categoria'];
-	if (isset($_POST['img'])){
-			$img = $_POST['img'];
+	if (isset($_FILES['img']['name'])){
+			$img = $_FILES['img']['name'];
 		}else{
 			$img="";
 		}
@@ -14,7 +14,7 @@
 		?>
 
 		<h2>Favor ingrese todos los datos</h2><br>
-		<a href="agregarCategoria.php">Volver</a>
+		<a href="javascript:history.back()">Volver</a>
 
 		<?php
 	}else
@@ -30,10 +30,13 @@
 			$s->bindValue(':img',$img);
 			$s->execute();
 
+			$directorio = '../img/';
+			move_uploaded_file($_FILES['img']['tmp_name'],$directorio.$img);
 		?>
 
 			<h2>Categoria Guardada</h2><br>
-			<a href="menu.html.php">Volver</a>
+			<a href="agregarCategoria.php">Agregar otra Categoria</a>
+			<a href="menu.html.php">Volver al menu</a>
 
 		<?php
 		}

@@ -27,11 +27,11 @@
 		<div id="content">
 			<h2>Agregar SubCategoria</h2>
 			<a href="menu.html.php">Volver</a>
-			<form method="post" action="guardarSubCategoria.php">
+			<form method="post" action="guardarSubCategoria.php" enctype="multipart/form-data">
 				<label for="subcategoria">Nombre de la SubCategoria</label>
 				<input type="text" name="subcategoria" id="subcategoria">
 				<label for="img">Imagen</label>
-				<input type="file" name="img" id="img">
+				<input type="file" name="img" id="img" accept="image/*">
 				<label for="idcategoria">Categoria</label>
 				<select name="idcategoria" id="idcategoria">
 					<option value="">Seleccione...</option>

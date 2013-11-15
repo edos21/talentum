@@ -42,7 +42,7 @@
 		<div id="content">
 			<h2>Agregar Articulos</h2>
 			<a href="menu.html.php">Volver</a>
-			<form method="post" action="guardarArticulo.php">
+			<form method="post" action="guardarArticulo.php" enctype="multipart/form-data">
 				<label for="articulo">Articulo</label>
 				<input type="text" name="articulo" id="articulo">
 				<label for="descripcion">Descripcion</label>
@@ -60,26 +60,26 @@
 					<option value="">Seleccione...</option>
 				</select>
 				<label for="peso">Peso</label>
-				<input type="peso" id="peso" name="peso">
+				<input type="text" id="peso" name="peso">
 				<label for="foto1">Foto 1</label>
-				<input type="file" name="foto1" id="foto1">
+				<input type="file" name="foto1" id="foto1" accept="image/*">
 				<label for="joya1">Joya 1</label>
-				<input type="file" name="joya1" id="joya1">
+				<input type="file" name="joya1" id="joya1" accept="image/*">
 
 				<label for="foto2">Foto 2</label>
-				<input type="file" name="foto2" id="foto2">
+				<input type="file" name="foto2" id="foto2" accept="image/*">
 				<label for="joya2">Joya 2</label>
-				<input type="file" name="joya2" id="joya2">
+				<input type="file" name="joya2" id="joya2" accept="image/*">
 
 				<label for="foto3">Foto 3</label>
-				<input type="file" name="foto3" id="foto3">
+				<input type="file" name="foto3" id="foto3" accept="image/*">
 				<label for="joya3">Joya 3</label>
-				<input type="file" name="joya3" id="joya3">
+				<input type="file" name="joya3" id="joya3" accept="image/*">
 
 				<label for="foto4">Foto 4</label>
-				<input type="file" name="foto4" id="foto4">
+				<input type="file" name="foto4" id="foto4" accept="image/*">
 				<label for="joya4">Joya 4</label>
-				<input type="file" name="joya4" id="joya4">
+				<input type="file" name="joya4" id="joya4" accept="image/*">
 				<input type="submit" value="Guardar">
 			</form>
 		</div>

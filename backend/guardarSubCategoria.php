@@ -4,8 +4,8 @@
 
 	$nombre = $_POST['subcategoria'];
 	$categoria = $_POST['idcategoria'];
-	if (isset($_POST['img'])){
-			$img = $_POST['img'];
+	if (isset($_FILES['img']['name'])){
+			$img = $_FILES['img']['name'];
 		}else{
 			$img="";
 		}
@@ -15,7 +15,7 @@
 		?>
 
 		<h2>Favor ingrese todos los datos</h2><br>
-		<a href="agregarSubCategoria.php">Volver</a>
+		<a href="javascript:history.back()">Volver</a>
 
 		<?php
 	}else
@@ -33,10 +33,13 @@
 			$s->bindValue(':idCategoria',$categoria);
 			$s->execute();
 
+			$directorio = '../img/';
+			move_uploaded_file($_FILES['img']['tmp_name'],$directorio.$img);
 		?>
 
-			<h2>Categoria Guardada</h2><br>
-			<a href="menu.html.php">Volver</a>
+			<h2>SubCategoria Guardada</h2><br>
+			<a href="agregarSubCategoria.php">Agregar otra SubCategoria</a>
+			<a href="menu.html.php">Volver al menu</a>
 
 		<?php
 		}
