@@ -37,11 +37,11 @@
 			<h2>Modificar Categoria</h2>
 			<a href="modificarCategoria.php">Volver</a>
 			<?php foreach($categorias as $categoria): ?>
-				<form method="post" action="actualizaCategoria.php">
+				<form method="post" action="actualizaCategoria.php" enctype="multipart/form-data">
 					<label for="categoria">Nombre de la Categoria</label>
 					<input type="text" name="categoria" id="categoria" value="<?php echo $categoria['nombre'] ?>">
 					<label for="img">Imagen</label>
-					<input type="file" name="img" id="img">
+					<input type="file" name="img" id="img" accept="image/*">
 					<input type="hidden" name="id" value="<?php echo $categoria['id'];?>">
 					<input type="submit" value="Guardar">
 				</form>

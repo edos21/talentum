@@ -3,8 +3,8 @@
 	include '../lib/conexion.php';
 
 	$nombre = $_POST['categoria'];
-	if (isset($_POST['img'])){
-			$img = $_POST['img'];
+	if (isset($_FILES['img']['name'])){
+			$img = $_FILES['img']['name'];
 		}else{
 			$img="";
 		}
@@ -57,6 +57,9 @@
 			$s->bindValue(':img',$img);
 			$s->bindValue(':id',$_POST['id']);
 			$s->execute();
+
+			$directorio = '../img/';
+			move_uploaded_file($_FILES['img']['tmp_name'],$directorio.$img);
 					
 		} catch (PDOException $e) {
 			

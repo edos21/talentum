@@ -58,11 +58,11 @@
 			<h2>Modificar SubCategoria</h2>
 			<a href="modificarSubCategoria.php">Volver</a>
 			<?php foreach($subcategorias as $subcategoria): ?>
-				<form method="post" action="actualizaSubCategoria.php">
+				<form method="post" action="actualizaSubCategoria.php" enctype="multipart/form-data">
 					<label for="subcategoria">Nombre de la SubCategoria</label>
 					<input type="text" name="subcategoria" id="subcategoria" value="<?php echo $subcategoria['subnombre'] ?>">
 					<label for="img">Imagen</label>
-					<input type="file" name="img" id="img">
+					<input type="file" name="img" id="img" accept="image/*">
 					<label for="idcategoria">Categoria</label>
 					<select name="idcategoria" id="idcategoria">
 						<option value="<?php echo $subcategoria['idCategoria'] ?>"><?php echo $subcategoria['nombre'] ?></option>
