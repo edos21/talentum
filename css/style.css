@@ -126,12 +126,13 @@ body {
   padding-top:35px;
 }
 .slider {
-  box-shadow: 0 0 6px white;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.47);
   width:960px;
   height:300px;
   margin: 0 auto;
   border-radius: 15px;
   overflow:hidden;
+  margin-bottom:10px;
 }
 
 .contfooter{
@@ -370,4 +371,8 @@ ul {
 .Social {
   display:block;
   
+}
+
+.sliderpequeno {
+
 }

@@ -7,14 +7,17 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/960_12_col.css">
-  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  <!--<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>-->
   <script src="js/cufon-yui.js" type="text/javascript"></script>
   <script src="js/GreyscaleBasic.font.js" type="text/javascript"></script>
-  <link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
+<!--  <link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
   <link type="text/css" href="css/jquery.ui.core.css" rel="stylesheet" />
-  <link type="text/css" href="css/jquery.ui.slider.css" rel="stylesheet" />
+  <link type="text/css" href="css/jquery.ui.slider.css" rel="stylesheet" />-->
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
   <script language="JavaScript" type="text/javascript" src="local 5- 6x8_VR.37/files/KeyShotVR.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/jquery.cycle2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
   <script language="JavaScript" type="text/javascript">
           var keyshotVR;
 
@@ -85,14 +88,30 @@
   
   
     <div class="slider">
-      <img src="img/slider.jpg" alt="">
+    <div class="cycle-slideshow" 
+
+    data-cycle-next="#next3"
+    data-cycle-prev="#prev3"
+
+    data-cycle-tile-vertical=false
+    data-cycle-speed="1000"
+    >
+    <div class="cycle-prev"></div>
+    <div class="cycle-next"></div>
+
+    <img src="img/slider/1.jpg">
+    <img src="img/slider/2.jpg">
+    <img src="img/slider/3.jpg">
+    <img src="img/slider/4.jpg">
+
+</div>
     </div>
 
   
   <div class="container_12 contenedorprincipal">
 
       <div class="sliderpequeno ">
-        <img src="img/slider_2.jpg" alt="">
+        
       </div>
         <div class="grid_4 cuadro360">
             <img src="img/360.png" alt="" class="png360">
@@ -122,10 +141,12 @@
       </div>
     </center>
     <div class="grid_7">
-      VIDEO
+      <iframe width="540" height="304" src="//www.youtube.com/embed/NJuujXUp-UQ" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="grid_5">
-      TWITTER
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/InvertirOro" data-widget-id="402202542399950848">Tweets por @InvertirOro</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
     </div>
   </div>
   <footer>
