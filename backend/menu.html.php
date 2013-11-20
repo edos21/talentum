@@ -67,9 +67,11 @@
 						<li><a href="modificarSubCategoria.php"><img src="../img/iconadmin/edit.png"> Modificar/Eliminar</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Seguridad</a>
+					<li><a href="#">Herramientas</a>
 						<ul class="submenu">
 							<!--li*5>a[href=#]{sub enlace $}-->
+              <li><a href="agregarPrecios.php"><img src="../img/iconadmin/add.png"> Ingresar Precios</a></li> 
+                <li><a href="modificarPrecios.php"><img src="../img/iconadmin/edit.png"> Ajustar Precios</a></li>            
 							<li><a href="cambiarClave.php"><img src="../img/iconadmin/pass.png"> Cambiar contraseña</a></li>
 						</ul>
 					</li>

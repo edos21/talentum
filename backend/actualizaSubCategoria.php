@@ -14,7 +14,7 @@
 		?>
 
 		<h2>Favor ingrese todos los datos</h2><br>
-		<a href="menu.html.php">Volver</a>
+		<a href="javascript:history.back()">Volver</a>
 
 		<?php
 	} else
