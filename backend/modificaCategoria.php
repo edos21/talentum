@@ -27,11 +27,11 @@
 	}
 ?>
 
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Categorias</title>
-	</head>
+<?php
+	
+	include ('../includes/header.html');
+
+?>
 	<body>
 		<div id="content">
 			<h2>Modificar Categoria</h2>
@@ -48,4 +48,8 @@
 			<?php endforeach; ?>
 		</div>
 	</body>
-</html>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

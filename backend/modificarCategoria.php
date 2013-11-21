@@ -1,3 +1,5 @@
+
+
 <?php
 
 	include '../lib/conexion.php';
@@ -25,11 +27,12 @@
 	}
 
 ?>
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Categorias</title>
-	</head>
+<?php
+	
+	include ('../includes/header.html');
+
+?>
+
 	<body>
 		<div id="content">
 			<h2>Modificar / Eliminar Categoria</h2>
@@ -61,4 +64,8 @@
 			</table>
 		</div>
 	</body>
-</html>
+<?php
+
+	include ('../includes/footer.html');
+
+?>
