@@ -26,12 +26,11 @@
 	}
 
 ?>
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Categorias</title>
-	</head>
-	<body>
+<?php
+	
+	include ('../includes/header.html');
+
+?>
 		<div id="content">
 			<h2>Modificar / Eliminar SubCategoria</h2>
 			<a href="menu.html.php">Volver</a>
@@ -63,5 +62,8 @@
 				</tbody>
 			</table>
 		</div>
-	</body>
-</html>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

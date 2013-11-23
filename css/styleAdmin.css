@@ -1,0 +1,33 @@
+
+#content {
+  padding: 10px 30px 30px 30px;
+  font-size: 12px;
+}
+
+.FormAdmin label {
+display:block
+}
+.FormAdmin input {
+  
+}
+
+.Botonera {
+  margin: 20px auto;
+}
+
+.InlineBLock {
+  display:inline-table
+}
+
+.TablaEstilo {
+  padding:10px;  
+  width: 410px;
+  
+}
+.TablaEstilo form{
+  display:inline-block
+}
+
+.TablaEstilo thead tr th{
+  font-weight:800;
+}

@@ -1,9 +1,8 @@
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Precios</title>
-	</head>
-	<body>
+<?php
+	
+	include ('../includes/header.html');
+
+?>
 		<div id="content">
 			<h2>Agregar Precios</h2>
 			<a href="menu.html.php">Volver</a>
@@ -15,5 +14,8 @@
 				<input type="submit" value="Guardar">
 			</form>
 		</div>
-	</body>
-</html>
+<?php
+
+	include ('../includes/footer.html');
+
+?>
