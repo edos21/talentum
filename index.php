@@ -133,11 +133,12 @@
   <div class="container_12 contenedorprincipal">
       <div class="sliderpequeno ">
         <div class="cycle-slideshow"
+             data-cycle-slides="li"
              data-cycle-fx=carousel
              data-cycle-timeout=1000>
           <?php foreach($categorias as $categoria): ?>
             <!--al colocar la etiqueta a se daña, pero es necesario colocar el hipervinculo, revisa como colocar ambos-->
-            <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"></a>
+            <li><a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"></a></li>
           <?php endforeach; ?>
         </div>
       </div>
