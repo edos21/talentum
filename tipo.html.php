@@ -156,72 +156,7 @@
               <img style="width:61px; height:61px" src="img/productos/<?php echo $item['joya4'] ?>" alt="">
             </a>
           </div>
-          <?php } 
-          if (isset($_GET['foto2'])) { ?>
-        <form action="comprarArticulo.html.php" method="post">
-          <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
-          <label for="oro">Oro:</label>
-          <select name="oro" id="oro">
-            <option value="">Seleccione...</option>
-            <option>18Kilates</option>
-            <option>10Kilates</option>
-          </select>
-          <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
-          <input type="hidden" name="foto" value="<?php echo $item['foto2'] ?>" >
-          <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-        </form>
-        <?php } elseif(isset($_GET['foto3'])) { ?>
-        <form action="comprarArticulo.html.php" method="post">
-          <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
-          <label for="oro">Oro:</label>
-          <select name="oro" id="oro">
-            <option value="">Seleccione...</option>
-            <option>18Kilates</option>
-            <option>10Kilates</option>
-          </select>
-          <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
-          <input type="hidden" name="foto" value="<?php echo $item['foto3'] ?>" >
-          <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-        </form>
-        <?php } elseif(isset($_GET['foto4'])) { ?>
-        <form action="comprarArticulo.html.php" method="post">
-          <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
-          <label for="oro">Oro:</label>
-          <select name="oro" id="oro">
-            <option value="">Seleccione...</option>
-            <option>18Kilates</option>
-            <option>10Kilates</option>
-          </select>
-          <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
-          <input type="hidden" name="foto" value="<?php echo $item['foto4'] ?>" >
-          <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-        </form>
-        <?php } else { ?>
-        <form action="comprarArticulo.html.php" method="post">
-          <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
-          <label for="oro">Oro:</label>
-          <select name="oro" id="oro">
-            <option value="">Seleccione...</option>
-            <option>18Kilates</option>
-            <option>10Kilates</option>
-          </select>
-          <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
-          <input type="hidden" name="foto" value="<?php echo $item['foto1'] ?>" >
-          <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-        </form>
-        <?php } ?>
+          <?php } ?>
         </div>
       </div>
       <?php endforeach; } ?>
