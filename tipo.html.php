@@ -96,7 +96,7 @@
         <div class="grid_4 push_4">
           <nav class="barraNav">
             <ul>
-              <li><a href="index.html">Inicio</a></li>
+              <li><a href="./">Inicio</a></li>
               <li><a href="categorias.html.php">Productos</a></li>
               <li><a href="contacto.html">Contacto</a></li>
             </ul>

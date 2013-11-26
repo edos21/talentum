@@ -1,3 +1,26 @@
+<?php
+
+  include 'lib/conexion.php';
+
+  try{
+
+    $sql = 'SELECT * FROM categoria';
+
+    $s = $pdo->prepare($sql);
+    $s->execute();
+
+    while($row = $s->fetch()){
+      $categorias[]= array(
+        'id'=>$row['id'],
+        'nombre'=>$row['nombre'],
+        'img'=>$row['img']);
+    }
+  }
+  catch(PDOException $e){
+    echo "error al cargar las categorias".$e;
+    exit();
+  }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -112,12 +135,10 @@
         <div class="cycle-slideshow"
              data-cycle-fx=carousel
              data-cycle-timeout=1000>
-          <img src="img/sliderpeq/a1.jpg">
-          <img src="img/sliderpeq/a2.jpg">
-          <img src="img/sliderpeq/a3.jpg">
-          <img src="img/sliderpeq/a4.jpg">
-          <img src="img/sliderpeq/a5.jpg">
-
+          <?php foreach($categorias as $categoria): ?>
+            <!--al colocar la etiqueta a se daña, pero es necesario colocar el hipervinculo, revisa como colocar ambos-->
+            <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"></a>
+          <?php endforeach; ?>
         </div>
       </div>
 
