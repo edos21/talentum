@@ -82,7 +82,7 @@
         <div class="ContCatg">
           
             <img src="img/<?php echo $subcategoria['img'] ?>" alt="">
-          <a href="subcategoria.html.php?subcategoria=<?php echo $subcategoria['id'] ?>">
+          <a href="tipo.html.php?subcategoria=<?php echo $subcategoria['id'] ?>">
           <div class="ContCatgTxt">
             <p><?php echo $subcategoria['subnombre'] ?></p>
           </div>
