@@ -5,14 +5,15 @@
 	<title>Talemtum Joyas | Registro</title>
 </head>
 <body>
+	<form action="registrar.php" method="POST">
 	<?php
 		if (isset($_GET['error'])) {
 	?>
-		<h2>Favor Introduzca todos los campos Necesarios</h2>
+		<h2>Error, Favor verifique que todos los datos estan correctamente llenados o que ya no se encuentra registrado</h2>
+		<input type="hidden" name="error">
 	<?php
 		}
 	?>
-	<form action="registrar.php" method="POST">
 		<label for="correo">Correo*</label>
 		<input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.com">
 		<label for="clave">Contrase&ntilde;a*</label>
