@@ -31,7 +31,7 @@ body {
 
 .contenedorprincipal {
   box-shadow: 0 0 6px black;
-  background-color:#F2F2F2;
+  background-color:#F0F0F0;
   margin-top: 20px;
   height:auto;
   padding-top:10px;  
@@ -379,6 +379,40 @@ ul {
 }
 
 .sliderpequeno .cycle-slideshow li {
- padding: 0 5px;
+ margin:10px 10px 30px 10px;
+  box-shadow: 0 0 5px white;
 }
 
+
+.ContDegradado {
+background: rgb(22,22,22),#F0F0F0;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxMiUiIHN0b3AtY29sb3I9IiMxNjE2MTYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjBmMGYwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  rgba(22,22,22,1) 12%, rgba(240,240,240,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(12%,rgba(22,22,22,1)), color-stop(100%,rgba(240,240,240,1))),#F0F0F0;
+background: -webkit-linear-gradient(top,  rgba(22,22,22,1) 12%,rgba(240,240,240,1) 100%),#F0F0F0;
+background: -o-linear-gradient(top,  rgba(22,22,22,1) 12%,rgba(240,240,240,1) 100%),#F0F0F0;
+background: -ms-linear-gradient(top,  rgba(22,22,22,1) 12%,rgba(240,240,240,1) 100%),#F0F0F0;
+background: linear-gradient(to bottom,  rgba(22,22,22,1) 12%,rgba(240,240,240,1) 100%),#F0F0F0;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#161616', endColorstr='#f0f0f0',GradientType=0 );
+background-size: 400px auto,auto;
+  background-repeat:repeat-x,repeat;
+
+}
+
+.cycle-slideshow {
+  position:relative;
+}
+.cycle-slideshow li a p {
+  display:block;
+  position:absolute;
+  width:140px;
+  height:30px;
+  bottom: -10px;
+  color:white;
+  font-size:11px;
+  font-weight:500;
+  font-style:italic;
+  text-align:center;
+  text-shadow: 0 0 3px white;   
+  
+}

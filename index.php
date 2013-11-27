@@ -130,7 +130,7 @@
     </div>
 
   
-  <div class="container_12 contenedorprincipal">
+  <div class="container_12 contenedorprincipal ContDegradado">
       <div class="sliderpequeno ">
         <div class="cycle-slideshow"
              data-cycle-slides="li"
@@ -138,7 +138,7 @@
              data-cycle-timeout=1000>
           <?php foreach($categorias as $categoria): ?>
             <!--al colocar la etiqueta a se daña, pero es necesario colocar el hipervinculo, revisa como colocar ambos-->
-            <li><a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"></a></li>
+            <li><a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"><p><?php echo $categoria['nombre'] ?></p></a></li>
           <?php endforeach; ?>
         </div>
       </div>
