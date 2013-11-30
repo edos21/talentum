@@ -42,7 +42,7 @@
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
         <div class="grid_4 logo">
-          <a href="#">
+          <a href="./">
           
           <img src="img/logo.png" alt="">
           </a>

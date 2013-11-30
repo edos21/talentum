@@ -135,7 +135,7 @@
         <div class="cycle-slideshow"
              data-cycle-slides="li"
              data-cycle-fx=carousel
-             data-cycle-timeout=1000>
+             data-cycle-timeout=1500>
           <?php foreach($categorias as $categoria): ?>
             <!--al colocar la etiqueta a se daña, pero es necesario colocar el hipervinculo, revisa como colocar ambos-->
             <li><a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"><p><?php echo $categoria['nombre'] ?></p></a></li>

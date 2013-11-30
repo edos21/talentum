@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="../css/menu-css3.css">
     <link rel="stylesheet" type="text/css" href="../css/styleAdmin.css">
+    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+    function recargarSub(val){
+ 
+         $('#subcategoria').html('<option value="">Cargando...</option>');
+
+         $.ajax({
+          url: 'cargarSub.php',
+          data: 'id='+val,
+          success: function(resp){
+           $('#subcategoria').html(resp)
+           }
+        });
+      }
+    </script>
   </head>
     <body>
     <div class="fondoNegro colordegradado"></div>
@@ -16,7 +31,7 @@
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
         <div class="grid_4 logo">
-          <a href="#">
+          <a href="../">
           
           <img src="../img/logo.png" alt="">
           </a>
@@ -25,7 +40,7 @@
         <div class="grid_4 push_4">
           <nav class="barraNav">
             <ul>
-              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../">Inicio</a></li>
               <li><a href="../categorias.html.php">Productos</a></li>
               <li><a href="../contacto.html">Contacto</a></li>
             </ul>

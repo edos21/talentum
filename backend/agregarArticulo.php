@@ -22,6 +22,7 @@
 	include ('../includes/header.html');
 
 ?>
+
 <div id="content">
   <h2><img src="../img/iconadmin/add.png" alt="">Agregar Articulos</h2>
   <a href="menu.html.php">Volver</a>
@@ -88,6 +89,7 @@
     </div>
   </form>
 </div>
+
 <?php
 
 	include ('../includes/footer.html');
