@@ -61,6 +61,35 @@
       echo "error al cargar las categorias".$e;
       exit();
   }
+  }else{
+    try{
+
+      $sql = 'SELECT * FROM articulos WHERE subCategoria=:subcategoria';
+
+      $s = $pdo->prepare($sql);
+      $s->bindValue(':subcategoria', $_GET['subcategoria']);
+      $s->execute();
+
+      if($row = $s->fetch()){
+        $items[]= array(
+          'id'=>$row['id'],
+          'articulo'=>$row['articulo'],
+          'descripcion'=>$row['descripcion'],
+          'subCategoria'=>$row['subCategoria'],
+          'joya1'=>$row['joya1'],
+          'foto1'=>$row['foto1'],
+          'joya2'=>$row['joya2'],
+          'foto2'=>$row['foto2'],
+          'joya3'=>$row['joya3'],
+          'foto3'=>$row['foto3'],
+          'joya4'=>$row['joya4'],
+          'foto4'=>$row['foto4']);
+      }
+    }
+    catch(PDOException $e){
+      echo "error al cargar las categorias".$e;
+      exit();
+  }
   }
 ?>
 

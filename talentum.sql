@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-11-2013 a las 23:41:03
+-- Tiempo de generación: 30-11-2013 a las 02:52:46
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `articulos` (
   `joya4` text,
   `foto4` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `articulos`
@@ -50,7 +50,8 @@ CREATE TABLE IF NOT EXISTS `articulos` (
 
 INSERT INTO `articulos` (`id`, `articulo`, `descripcion`, `categoria`, `subCategoria`, `peso`, `joya1`, `foto1`, `joya2`, `foto2`, `joya3`, `foto3`, `joya4`, `foto4`) VALUES
 (3, 'graduacion1', 'anillo especial para graduaciones', 17, 4, 5, '1670_picture.png', 'shutup-and-take-my-money-meme-template-150x150.jpg', '', '', '', '', '', ''),
-(4, 'e2', 'anillo ideal de e2sistems!!', 17, 4, 6, '+logito.jpg', '65006_10152988191625716_399232161_a.jpg', 'FlechaArriba.png', '1004649_10201712509313634_68448403_n.jpg', '', '', '', '');
+(4, 'e2', 'anillo ideal de e2sistems!!', 17, 4, 6, '+logito.jpg', '65006_10152988191625716_399232161_a.jpg', 'FlechaArriba.png', '1004649_10201712509313634_68448403_n.jpg', '', '', '', ''),
+(5, 'Venus 1', 'sfasfaga', 1, 5, 5, '400_F_14962982_bIg77qJKV18LvIjRp4qNxoFz5HaIkEUB.jpg', 'azul.jpg', 'piedra-roja.jpg', 'rojo.jpg', 'il_fullxfull-541AqsK2-1394.jpg', 'amarillo.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,41 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `celular` int(25) DEFAULT NULL,
   `estado` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `correo`, `clave`, `rif`, `nombre`, `direccion`, `telefono`, `celular`, `estado`) VALUES
+(1, 'admin@admin.com', '1234', '', 'administrador', '', '', 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compra`
+--
+
+CREATE TABLE IF NOT EXISTS `compra` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idcliente` int(11) NOT NULL,
+  `idarticulo` int(11) NOT NULL,
+  `foto` text NOT NULL,
+  `talla` double NOT NULL,
+  `oro` int(11) NOT NULL,
+  `costo` int(11) NOT NULL,
+  `observacion` text NOT NULL,
+  `precio` double NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `compra`
+--
+
+INSERT INTO `compra` (`id`, `idcliente`, `idarticulo`, `foto`, `talla`, `oro`, `costo`, `observacion`, `precio`, `estado`) VALUES
+(1, 1, 5, 'azul.jpg', 7, 18, 0, 'bonito', 0, '');
 
 -- --------------------------------------------------------
 
@@ -111,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `precios` (
   `descripcion` varchar(50) NOT NULL,
   `monto` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `precios`
@@ -135,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `subcategoria` (
   `img` text NOT NULL,
   `idCategoria` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `subcategoria`
@@ -145,7 +180,9 @@ INSERT INTO `subcategoria` (`id`, `subnombre`, `img`, `idCategoria`) VALUES
 (1, 'Dama', 'PANO_20130711_174143.jpg', 1),
 (2, 'Dama', 'PANO_20130711_172837.jpg', 4),
 (3, 'caballero', 'PANO_20130711_172837.jpg', 4),
-(4, 'like sir', '1840_picture.png', 17);
+(4, 'like sir', '1840_picture.png', 17),
+(5, 'venus', 'anillo-de-grado-venus-4-cortes-para-dama-ag5.jpg', 1),
+(6, 'PICASSO', 'images.jpg', 1);
 
 -- --------------------------------------------------------
 
