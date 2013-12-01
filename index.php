@@ -75,10 +75,35 @@
 </head>
 <body>
     <div class="fondoNegro colordegradado"></div>
+    
   <header>
+    <div class="BarraSuperior">
+    
+      <div class="container_12">
+      
+        <nav class="barraNav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="categorias.html.php">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              
+              <a href="contacto.html">Cliente</a>
+              <ul class="barraNavSubmenu">
+                <li><a href="#">Ingresar</a></li>
+                <li><a href="#">Registrarse</a></li>
+              </ul>
+              
+            </li>
+          </ul>
+        </nav>
+        
+      </div>
+      
+    </div>
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
-        <div class="grid_4 logo">
+        <div class="grid_4">
           <a href="#">
           
           <img src="img/logo.png" alt="">
@@ -86,13 +111,6 @@
         </div>
         
         <div class="grid_4 push_4">
-          <nav class="barraNav">
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="categorias.html.php">Productos</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-          </nav>
           <div class="row oro">
             <div class="orito">
               <img src="img/oro.png" alt="">
@@ -132,15 +150,27 @@
   
   <div class="container_12 contenedorprincipal ContDegradado">
       <div class="sliderpequeno ">
-        <div class="cycle-slideshow"
-             data-cycle-slides="li"
-             data-cycle-fx=carousel
-             data-cycle-timeout=1500>
+        <div class="cycle-slideshow" data-cycle-slides="li" data-cycle-fx=carousel data-cycle-timeout=0 data-cycle-next="#next" data-cycle-prev="#prev" data-cycle-pager="#pager">
           <?php foreach($categorias as $categoria): ?>
             <!--al colocar la etiqueta a se daña, pero es necesario colocar el hipervinculo, revisa como colocar ambos-->
-            <li><a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>"><img style="width:140px" src="img/<?php echo $categoria['img'] ?>"><p><?php echo $categoria['nombre'] ?></p></a></li>
+              <div class="WrapSlidePeq">
+              <li>
+                <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>">
+                  <img style="width:140px" src="img/<?php echo $categoria['img'] ?>">
+                  <p>
+                    <?php echo $categoria[ 'nombre'] ?>
+                  </p>
+                </a>
+              </li>
+              </div>
           <?php endforeach; ?>
         </div>
+      
+          <a class="sliderpequenoBoton BtnLeft " href=# id=prev> < </a>
+          <a class="sliderpequenoBoton BtnRight" href=# id=next> > </a>
+        
+      
+      <!--  <div class="cycle-pager" id=pager></div>-->
       </div>
 
 
@@ -173,11 +203,11 @@
       </div>
     </center>
     <div class="grid_7">
-      <iframe width="540" height="304" src="//www.youtube.com/embed/NJuujXUp-UQ" frameborder="0" allowfullscreen></iframe>
+<!--      <iframe width="540" height="304" src="//www.youtube.com/embed/NJuujXUp-UQ" frameborder="0" allowfullscreen></iframe>-->
     </div>
     <div class="grid_5">
-      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/InvertirOro" data-widget-id="402202542399950848">Tweets por @InvertirOro</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!--      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/InvertirOro" data-widget-id="402202542399950848">Tweets por @InvertirOro</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
 
     </div>
   </div>

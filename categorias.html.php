@@ -38,24 +38,41 @@
 </head>
 <body>
     <div class="fondoNegro colordegradado"></div>
-  <header>
+<header>
+    <div class="BarraSuperior">
+    
+      <div class="container_12">
+      
+        <nav class="barraNav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="categorias.html.php">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              
+              <a href="contacto.html">Cliente</a>
+              <ul class="barraNavSubmenu">
+                <li><a href="#">Ingresar</a></li>
+                <li><a href="#">Registrarse</a></li>
+              </ul>
+              
+            </li>
+          </ul>
+        </nav>
+        
+      </div>
+      
+    </div>
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
-        <div class="grid_4 logo">
-          <a href="./">
+        <div class="grid_4">
+          <a href="#">
           
           <img src="img/logo.png" alt="">
           </a>
         </div>
         
         <div class="grid_4 push_4">
-          <nav class="barraNav">
-            <ul>
-              <li><a href="./">Inicio</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-          </nav>
           <div class="row oro">
             <div class="orito">
               <img src="img/oro.png" alt="">
@@ -79,8 +96,8 @@
     <div class="grid_2">
       <div class="ContCatg">
         
-          <img src="img/<?php echo $categoria['img'] ?>" alt="">
         <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>">
+          <img src="img/<?php echo $categoria['img'] ?>" alt="">
         <div class="ContCatgTxt">
           <p><?php echo $categoria['nombre'] ?></p>
         </div>

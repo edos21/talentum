@@ -5,6 +5,56 @@
 	<title>Talemtum Joyas | Registro</title>
 </head>
 <body>
+	<header>
+    <div class="BarraSuperior">
+    
+      <div class="container_12">
+      
+        <nav class="barraNav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="categorias.html.php">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              
+              <a href="contacto.html">Cliente</a>
+              <ul class="barraNavSubmenu">
+                <li><a href="#">Ingresar</a></li>
+                <li><a href="#">Registrarse</a></li>
+              </ul>
+              
+            </li>
+          </ul>
+        </nav>
+        
+      </div>
+      
+    </div>
+    <div class="container_12 barraPrincipal">
+      <div class="grid_12">
+        <div class="grid_4">
+          <a href="#">
+          
+          <img src="img/logo.png" alt="">
+          </a>
+        </div>
+        
+        <div class="grid_4 push_4">
+          <div class="row oro">
+            <div class="orito">
+              <img src="img/oro.png" alt="">
+            </div>
+          <div class="precioro">
+            <p>Precio del Oro</p>
+            <p>99999,99 $
+            <img src="img/FlechaArriba.png" alt="">
+            </p>
+          </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </header>
 	<form action="registrar.php" method="POST">
 	<?php
 		if (isset($_GET['error'])) {
