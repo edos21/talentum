@@ -22,21 +22,19 @@ if ($row = $s->fetch()){
 }
 
 try{
-	$sql = 'INSERT INTO compra SET
+	$sql = 'INSERT INTO pagos SET
 	idcliente = :idcliente,
-	idarticulo = :idarticulo,
-	foto = :foto,
-	talla = :talla,
-	oro = :oro,
+	tipo = :tipo,
+	ndocumento = :ndocumento,
+	monto = :monto,
 	observacion = :observacion,
 	estado = :estado';
 
 	$s = $pdo->prepare($sql);
 	$s->bindValue(':idcliente', $idcliente);
-	$s->bindValue(':idarticulo', $_POST['id']);
-	$s->bindValue(':foto', $_POST['foto']);
-	$s->bindValue(':talla', $_POST['talla']);
-	$s->bindValue(':oro', $_POST['oro']);
+	$s->bindValue(':tipo', $_POST['tipo']);
+	$s->bindValue(':ndocumento', $_POST['ndocumento']);
+	$s->bindValue(':monto', $_POST['monto']);
 	$s->bindValue(':observacion', $_POST['observaciones']);
 	$s->bindValue(':estado', 'Espera');
 	$s->execute();
@@ -47,9 +45,9 @@ catch(PDOException $e){
 	exit();
 }
 
-header( "refresh:5;url=categorias.html.php" )
+header( "refresh:5;url=./" )
 ?>
 				
-<h2>Solicitud Realizada</h2><br>
+<h2>Pago Realizado</h2><br>
 <p>El navegador lo redireccionara automaticamente en 5 segundos</p>
-<a href="categorias.html.php">Volver al inicio</a>
+<a href="./">Volver al inicio</a>

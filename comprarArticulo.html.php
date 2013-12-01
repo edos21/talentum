@@ -13,6 +13,15 @@ include 'lib/seguridad.php';
 	<title>Talemtum Joyas | Compra</title>
 </head>
 <body>
+<?php
+	if ($_POST['talla']=="" || $_POST['oro']==""){
+		header( "refresh:5;url=".$_SERVER['HTTP_REFERER'] )
+?>
+	<p>Recuerde llenar la talla y el tipo de oro que desea adquirir</p>
+	<a href="javascript: history.back()">Cancelar</a>
+<?php
+	}else{
+?>
 	<p>¿Seguro de Solicitar el articulo?</p>
 	<img src="img/productos/<?=$_POST['foto']?>">
 	<p>De talla <b><?=$_POST['talla']?></b> y Oro <b><?=$_POST['oro']?></b></p>
@@ -27,5 +36,6 @@ include 'lib/seguridad.php';
 		<a href="javascript: history.back()">Cancelar</a>
 	</form>
 	<p>Al momento de confirmar su pedido, le enviaremos un correo a <b><?=$_SESSION['correo']?></b></p>
+	<?php } ?>
 </body>
 </html>
