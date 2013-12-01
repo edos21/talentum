@@ -507,3 +507,48 @@ background-size: 400px auto,auto;
   right:-45px;
 }
 
+
+
+
+.FormRegistro label{
+  font-size: 11px;
+}
+
+.FormRegistro {
+
+}
+
+.FormRegistro .grid_8 label {
+  
+}
+
+
+
+/* Modal window */
+#mask {
+ position:absolute;
+ z-index:2000;
+ background-color:#000;
+ display:none;
+ top: -60px;
+}
+#modalBoxes .window {
+ position:absolute;
+ width:650px;
+ height:450px;
+ display:none;
+ z-index:9999;
+ padding:10px;
+}
+#modalBoxes #dialog {
+ width:650px;
+ height:450px;
+ background:white;
+ border: 5px solid rgba(4,4,4,1);
+ -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.close {
+  float:right
+}
