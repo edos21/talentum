@@ -479,7 +479,6 @@ background-size: 400px auto,auto;
 
 }
 
-
 .sliderpequenoBoton {
   display:table-cell;
   width:40px;
@@ -507,22 +506,10 @@ background-size: 400px auto,auto;
   right:-45px;
 }
 
-
-
-
 .FormRegistro label{
   font-size: 11px;
-}
-
-.FormRegistro {
 
 }
-
-.FormRegistro .grid_8 label {
-  
-}
-
-
 
 /* Modal window */
 #mask {
@@ -535,20 +522,43 @@ background-size: 400px auto,auto;
 #modalBoxes .window {
  position:absolute;
  width:650px;
- height:450px;
+ height:330px;
  display:none;
  z-index:9999;
  padding:10px;
 }
-#modalBoxes #dialog {
+#modalBoxes #dialog,
+#modalBoxes #login{
  width:650px;
- height:450px;
+ height:330px;
  background:white;
  border: 5px solid rgba(4,4,4,1);
  -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
 }
-.close {
+.FloatRight {
   float:right
+}
+
+.ModalLogo {
+  display:table-cell;
+  background-color: gray;
+  height:300px;
+  width:100px;
+  margin:0;
+  padding:0;
+  vertical-align:middle;
+  line-height:250px;
+  text-align:center;
+  box-shadow:inset 2px 2px 5px black; 
+}
+
+.BtnVerde {
+  height:30px;
+  padding: 0 20px;
+  line-height:30px;
+  border-radius:15px;
+  background-color:#ccc7c7;
+  box-shadow: 0 0 3px black;
 }

@@ -79,7 +79,7 @@
 		  <img src="img/business_user_add.png" alt="">
 		  
 		</div>
-		
+		<p>Registro</p>
 		<div class="grid_8">
 		  
           <label for="nombre">Razon Social/Nombre*</label><br>
@@ -91,7 +91,7 @@
           <label for="clave">Contrase&ntilde;a*</label><br>
           <input type="password" name="clave" id="clave"><br>
     
-                  <span>La clave debe tener mas de 8 caracteres</span><br>
+          <span>La clave debe tener mas de 8 caracteres</span><br>
           
           <label for="cclave">Repetir Contrase&ntilde;a*</label><br>
           <input type="password" name="cclave" id="cclave"><br>

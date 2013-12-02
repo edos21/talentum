@@ -40,7 +40,8 @@
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
   <script language="JavaScript" type="text/javascript" src="local 5- 6x8_VR.37/files/KeyShotVR.js"></script>
   <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 
   <script src="js/jquery.cycle2.min.js" type="text/javascript"></script>
   <script src="js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
@@ -131,7 +132,7 @@
               <a href="contacto.html">Cliente</a>
               <ul class="barraNavSubmenu">
                 <li>
-                  <a href="#">Ingresar</a>
+                  <a href="#login" name="modal">Ingresar</a>
                 </li>
                 <li>
                   <a href="#dialog" name="modal">Registrarse</a>
@@ -305,64 +306,93 @@
   
 <div id="modalBoxes">
   <div id="mask"></div>
-  
+
   <div id="dialog" class="window">
-    	
-    	<form class="FormRegistro" action="registrar.php" method="POST">
-	<?php
-		if (isset($_GET['error'])) {
-	?>
-		<h2>Error, Favor verifique que todos los datos estan correctamente llenados o que ya no se encuentra registrado</h2>
-		<input type="hidden" name="error">
-	<?php
-		}
-	?>
-		
-		<div class="grid_1">
-		  <img src="img/business_user_add.png" alt="">
-		  
-		</div>
-		
-		<div class="grid_8">
-		  
-          <label for="nombre">Razon Social/Nombre*</label><br>
-          <input type="text" name="nombre" id="nombre"><br>
-          
-          <label for="rif">Rif/Cedula</label><br>
-          <input type="text" name="rif" id="rif"><br>
-          
+    <a href="#" class="FloatRight close">
+      <img src="img/exit.png" alt="">
+    </a>
+
+    <form class="FormRegistro" action="registrar.php" method="POST">
+
+      <?php if (isset($_GET[ 'error'])) { ?>
+      <h4>Error, Favor verifique que todos los datos estan correctamente llenados o que ya no se encuentra registrado</h4>
+      <input type="hidden" name="error">
+      <?php } ?>
+
+      <div class="grid_2 ModalLogo">
+        <img src="img/business_user_add.png" alt="">
+
+      </div>
+
+      <div class="grid_4">
+        <label for="nombre">Razon Social/Nombre*</label>
+        <br>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+
+        <label for="rif">Rif/Cedula</label>
+        <br>
+        <input type="text" name="rif" id="rif">
+        <br>
+      </div>
+
+      <div class="grid_6">
+        
+        <label for="correo">Correo*</label>
+        <br>
+        <input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.com">
+        <br>
+        <label for="celular">Celular</label>
+        <br>
+        <input type="text" name="celular" id="celular">
+        <br>
+        
+      </div>
+      <div class="grid_4">
+
+        <label for="clave">Contrase&ntilde;a*</label>
+        <br>
+        <input type="password" name="clave" id="clave">
+        <br>
+
+
+        <label for="cclave">Repetir Contrase&ntilde;a*</label>
+        <br>
+        <input type="password" name="cclave" id="cclave">
+        <br>
+        <p style="font-size:10px;color:red">La clave debe tener mas de 8 caracteres</p>
+        <br>
+
+      </div>
+      <div class="grid_6">
+
+
+
+        <label for="direccion">Direcci&oacute;n</label>
+        <br>
+        <textarea cols="50" rows="5" name="direccion" id="direccion"></textarea>
+        <br>
+
+        <label for="telefono">Telefono</label>
+        <br>
+        <input type="text" name="telefono" id="telefono">
+        <br>
+
+
+      </div>
+
+      <div class="clearfix"></div>
+      <input class="FloatRight BtnVerde" type="submit" value="Registrar">
+
+    </form>
+  </div>
+
+  <div id="login" class="window">
+    <a href="#" class="FloatRight close">
+      <img src="img/exit.png" alt="">
+    </a>
+
     
-                      
-          <label for="clave">Contrase&ntilde;a*</label><br>
-          <input type="password" name="clave" id="clave"><br>
-          
-          
-          <label for="cclave">Repetir Contrase&ntilde;a*</label><br>
-          <input type="password" name="cclave" id="cclave"><br>
-          <span>La clave debe tener mas de 8 caracteres</span><br>
-          
-          
-          
-          </div>
-          
-
-          
-          <label for="correo">Correo*</label><br>
-          <input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.com"><br>
-          
-          <label for="direccion">Direcci&oacute;n</label><br>
-          <textarea cols="50" rows="5" name="direccion" id="direccion"></textarea><br>
-          
-          <label for="telefono">Telefono</label><br>
-          <input type="text" name="telefono" id="telefono"><br>
-          
-          <label for="celular">Celular</label><br>
-          <input type="text" name="celular" id="celular"><br>
-          <input type="submit" value="Registrar">
-		</div>
-
-	</form>
-    <a href="#" class="close"><img src="img/exit.png" alt=""></a>
   </div>
 </div>
   
