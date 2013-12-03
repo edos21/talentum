@@ -20,7 +20,7 @@
       
         <nav class="barraNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="./">Inicio</a></li>
             <li><a href="categorias.html.php">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li>
@@ -69,7 +69,7 @@
 	<?php
 		if (isset($_GET['error'])) {
 	?>
-		<h2>Error, Favor verifique que todos los datos estan correctamente llenados o que ya no se encuentra registrado</h2>
+		<h2>Error, Favor verifique que todos los datos estan correctamente llenados o que no se encuentra registrado</h2>
 		<input type="hidden" name="error">
 	<?php
 		}

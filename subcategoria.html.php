@@ -47,7 +47,7 @@
       
         <nav class="barraNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="./">Inicio</a></li>
             <li><a href="categorias.html.php">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li>
@@ -68,7 +68,7 @@
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
         <div class="grid_4">
-          <a href="#">
+          <a href="./">
           
           <img src="img/logo.png" alt="">
           </a>
@@ -98,10 +98,9 @@
     if (count($subcategorias) > 0){
       foreach($subcategorias as $subcategoria): ?>
       <div class="grid_2">
-        <div class="ContCatg">
-          
-            <img src="img/<?php echo $subcategoria['img'] ?>" alt="">
+        <div class="ContCatg">        
           <a href="tipo.html.php?subcategoria=<?php echo $subcategoria['id'] ?>">
+          <img style="width:140px" src="img/<?php echo $subcategoria['img'] ?>" alt="">
           <div class="ContCatgTxt">
             <p><?php echo $subcategoria['subnombre'] ?></p>
           </div>

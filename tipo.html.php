@@ -119,7 +119,7 @@
       
         <nav class="barraNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="./">Inicio</a></li>
             <li><a href="categorias.html.php">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li>
@@ -140,7 +140,7 @@
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
         <div class="grid_4">
-          <a href="#">
+          <a href="./">
           
           <img src="img/logo.png" alt="">
           </a>
@@ -204,7 +204,7 @@
           </div>
          <?php } 
           if (isset($_GET['foto2'])) { ?>
-        <form action="comprarArticulo.html.php" method="post">
+        <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
           <input type="text" name="talla" id="talla">
           <label for="oro">Oro:</label>
@@ -220,7 +220,7 @@
           <input type="submit" value="Comprar">
         </form>
         <?php } elseif(isset($_GET['foto3'])) { ?>
-        <form action="comprarArticulo.html.php" method="post">
+        <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
           <input type="text" name="talla" id="talla">
           <label for="oro">Oro:</label>
@@ -236,7 +236,7 @@
           <input type="submit" value="Comprar">
         </form>
         <?php } elseif(isset($_GET['foto4'])) { ?>
-        <form action="comprarArticulo.html.php" method="post">
+        <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
           <input type="text" name="talla" id="talla">
           <label for="oro">Oro:</label>
@@ -252,7 +252,7 @@
           <input type="submit" value="Comprar">
         </form>
         <?php } else { ?>
-        <form action="comprarArticulo.html.php" method="post">
+        <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
           <input type="text" name="talla" id="talla">
           <label for="oro">Oro:</label>

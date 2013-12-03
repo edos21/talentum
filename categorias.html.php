@@ -45,7 +45,7 @@
       
         <nav class="barraNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="./">Inicio</a></li>
             <li><a href="categorias.html.php">Productos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li>
@@ -66,7 +66,7 @@
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
         <div class="grid_4">
-          <a href="#">
+          <a href="./">
           
           <img src="img/logo.png" alt="">
           </a>
@@ -97,7 +97,7 @@
       <div class="ContCatg">
         
         <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>">
-          <img src="img/<?php echo $categoria['img'] ?>" alt="">
+          <img style="width:140px" src="img/<?php echo $categoria['img'] ?>" alt="">
         <div class="ContCatgTxt">
           <p><?php echo $categoria['nombre'] ?></p>
         </div>

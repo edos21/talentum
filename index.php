@@ -1,5 +1,6 @@
 <?php
-
+  session_start();
+  error_reporting(0);
   include 'lib/conexion.php';
 
   try{
@@ -129,14 +130,29 @@
             </li>
             <li>
 
-              <a href="contacto.html">Cliente</a>
+              <a href="#">Cliente</a>
               <ul class="barraNavSubmenu">
+              <?php if ($_SESSION['login'] != true){ ?>
                 <li>
                   <a href="#login" name="modal">Ingresar</a>
                 </li>
                 <li>
                   <a href="#dialog" name="modal">Registrarse</a>
                 </li>
+              <?php }else{ ?>
+                <li>
+                  <a href="cliente/Pago.php">Pagar</a>
+                </li>
+                <li>
+                  <a href="">Estado Compras</a>
+                </li>
+                <li>
+                  <a href="">Actualizar Datos</a>
+                </li>
+                <li>
+                  <a href="lib/salir.php">Cerrar Sesion</a>
+                </li>
+              <?php } ?>
               </ul>
 
             </li>

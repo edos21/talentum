@@ -2,8 +2,8 @@
 
 session_start();
 
-include 'lib/conexion.php';
-include 'lib/seguridad.php';
+include '../lib/conexion.php';
+include '../lib/seguridad.php';
 
 ?>
 <!doctype html>
@@ -20,12 +20,12 @@ include 'lib/seguridad.php';
       
         <nav class="barraNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="categorias.html.php">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="../">Inicio</a></li>
+            <li><a href="../categorias.html.php">Productos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
             <li>
               
-              <a href="contacto.html">Cliente</a>
+              <a href="../contacto.html">Cliente</a>
               <ul class="barraNavSubmenu">
                 <li><a href="#">Ingresar</a></li>
                 <li><a href="#">Registrarse</a></li>
@@ -41,21 +41,21 @@ include 'lib/seguridad.php';
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
         <div class="grid_4">
-          <a href="#">
+          <a href="../">
           
-          <img src="img/logo.png" alt="">
+          <img src="../img/logo.png" alt="">
           </a>
         </div>
         
         <div class="grid_4 push_4">
           <div class="row oro">
             <div class="orito">
-              <img src="img/oro.png" alt="">
+              <img src="../img/oro.png" alt="">
             </div>
           <div class="precioro">
             <p>Precio del Oro</p>
             <p>99999,99 $
-            <img src="img/FlechaArriba.png" alt="">
+            <img src="../img/FlechaArriba.png" alt="">
             </p>
           </div>
           </div>
@@ -73,7 +73,7 @@ include 'lib/seguridad.php';
 	}else{
 ?>
 	<p>¿Seguro de Solicitar el articulo?</p>
-	<img src="img/productos/<?=$_POST['foto']?>">
+	<img src="../img/productos/<?=$_POST['foto']?>">
 	<p>De talla <b><?=$_POST['talla']?></b> y Oro <b><?=$_POST['oro']?></b></p>
 	<p>Observaciones: <?=$_POST['observaciones']?></p>
 	<form action="comprar.php" method="post">

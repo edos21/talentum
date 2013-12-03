@@ -2,8 +2,8 @@
 
 session_start();
 
-include 'lib/conexion.php';
-include 'lib/seguridad.php';
+include '../lib/conexion.php';
+include '../lib/seguridad.php';
 
 try{
 	$sql = 'SELECT * FROM clientes WHERE correo = :correo';
@@ -22,19 +22,21 @@ if ($row = $s->fetch()){
 }
 
 try{
-	$sql = 'INSERT INTO pagos SET
+	$sql = 'INSERT INTO compra SET
 	idcliente = :idcliente,
-	tipo = :tipo,
-	ndocumento = :ndocumento,
-	monto = :monto,
+	idarticulo = :idarticulo,
+	foto = :foto,
+	talla = :talla,
+	oro = :oro,
 	observacion = :observacion,
 	estado = :estado';
 
 	$s = $pdo->prepare($sql);
 	$s->bindValue(':idcliente', $idcliente);
-	$s->bindValue(':tipo', $_POST['tipo']);
-	$s->bindValue(':ndocumento', $_POST['ndocumento']);
-	$s->bindValue(':monto', $_POST['monto']);
+	$s->bindValue(':idarticulo', $_POST['id']);
+	$s->bindValue(':foto', $_POST['foto']);
+	$s->bindValue(':talla', $_POST['talla']);
+	$s->bindValue(':oro', $_POST['oro']);
 	$s->bindValue(':observacion', $_POST['observaciones']);
 	$s->bindValue(':estado', 'Espera');
 	$s->execute();
@@ -45,9 +47,9 @@ catch(PDOException $e){
 	exit();
 }
 
-header( "refresh:5;url=./" )
+header( "refresh:5;url=../categorias.html.php" )
 ?>
 				
-<h2>Pago Realizado</h2><br>
+<h2>Solicitud Realizada</h2><br>
 <p>El navegador lo redireccionara automaticamente en 5 segundos</p>
-<a href="./">Volver al inicio</a>
+<a href="../categorias.html.php">Volver al inicio</a>

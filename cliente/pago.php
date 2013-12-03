@@ -2,8 +2,8 @@
 
 session_start();
 
-include 'lib/conexion.php';
-include 'lib/seguridad.php';
+include '../lib/conexion.php';
+include '../lib/seguridad.php';
 
 ?>
 <!doctype html>
