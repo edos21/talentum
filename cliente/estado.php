@@ -5,6 +5,7 @@ session_start();
 include '../lib/conexion.php';
 include '../lib/seguridad.php';
 
+//buscar el id en funcion de su correo
 try{
 
 	$sql= 'SELECT * FROM clientes WHERE
@@ -24,6 +25,7 @@ if($row = $s->fetch()){
 	$idcliente = $row['id'];
 }
 
+// Cargar articulos en espera
 try{
 
 	$sql = 'SELECT * FROM compra WHERE
@@ -47,6 +49,32 @@ while ($row = $s->fetch()) {
 		'oro' => $row['oro'],
 		'observacion' => $row['observacion']);
 }
+
+//cargar pagos en espera
+try{
+
+	$sql = 'SELECT * FROM pagos WHERE
+	idcliente=:idcliente
+	AND estado=:estado';
+
+	$s = $pdo->prepare($sql);
+	$s->bindValue(':idcliente',$idcliente);
+	$s->bindValue(':estado','Espera');
+	$s->execute();
+}
+
+catch(PDOException $e){
+	echo "Error al cargar compras".$e;
+	exit();
+}
+while ($row = $s->fetch()) {
+	$pagosEspera[] = array(
+		'tipo' => $row['tipo'],
+		'ndocumento' => $row['ndocumento'],
+		'monto' => $row['monto'],
+		'observacion' => $row['observacion']);
+}
+
 ?>
 
 <p>Articulos en espera</p>
@@ -75,12 +103,14 @@ while ($row = $s->fetch()) {
 		<th>Monto</th>
 		<th>Observacion</th>
 	</tr>
+	<?php foreach ($pagosEspera as $pagoEspera): ?>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td><?= $pagoEspera['tipo'] ?></td>
+		<td><?= $pagoEspera['ndocumento'] ?></td>
+		<td><?= $pagoEspera['monto'] ?></td>
+		<td><?= $pagoEspera['observacion'] ?></td>
 	</tr>
+	<?php endforeach ?>
 </table>
 
 <p>Articulos Aprobados y Comprados</p>

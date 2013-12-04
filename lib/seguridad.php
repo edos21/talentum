@@ -2,5 +2,5 @@
 
 
 if ($_SESSION['login'] != true){
-	header('location: ingreso.php?sesion');
+	header('location: ../ingreso.php?sesion');
 }
