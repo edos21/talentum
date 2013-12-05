@@ -141,13 +141,13 @@
                 </li>
               <?php }else{ ?>
                 <li>
-                  <a href="cliente/Pago.php">Pagar</a>
+                  <a href="cliente/pago.php">Pagar</a>
                 </li>
                 <li>
-                  <a href="">Estado Compras</a>
+                  <a href="cliente/estado.php">Estado Compras</a>
                 </li>
                 <li>
-                  <a href="">Actualizar Datos</a>
+                  <a href="cliente/modificar.php">Actualizar Datos</a>
                 </li>
                 <li>
                   <a href="lib/salir.php">Cerrar Sesion</a>

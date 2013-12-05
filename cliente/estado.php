@@ -1,10 +1,11 @@
 <?php
-
+error_reporting(0);
 session_start();
 
 include '../lib/conexion.php';
 include '../lib/seguridad.php';
-
+$compraTotal = 0;
+$pagoTotal = 0;
 //buscar el id en funcion de su correo
 try{
 
@@ -29,12 +30,10 @@ if($row = $s->fetch()){
 try{
 
 	$sql = 'SELECT * FROM compra WHERE
-	idcliente=:idcliente
-	AND estado=:estado';
+	idcliente=:idcliente';
 
 	$s = $pdo->prepare($sql);
 	$s->bindValue(':idcliente',$idcliente);
-	$s->bindValue(':estado','Espera');
 	$s->execute();
 }
 
@@ -43,23 +42,23 @@ catch(PDOException $e){
 	exit();
 }
 while ($row = $s->fetch()) {
-	$comprasEspera[] = array(
+	$compras[] = array(
 		'foto' => $row['foto'],
 		'talla' => $row['talla'],
 		'oro' => $row['oro'],
-		'observacion' => $row['observacion']);
+		'observacion' => $row['observacion'],
+		'precio' => $row['precio'],
+		'estado' => $row['estado']);
 }
 
 //cargar pagos en espera
 try{
 
 	$sql = 'SELECT * FROM pagos WHERE
-	idcliente=:idcliente
-	AND estado=:estado';
+	idcliente=:idcliente';
 
 	$s = $pdo->prepare($sql);
 	$s->bindValue(':idcliente',$idcliente);
-	$s->bindValue(':estado','Espera');
 	$s->execute();
 }
 
@@ -68,11 +67,12 @@ catch(PDOException $e){
 	exit();
 }
 while ($row = $s->fetch()) {
-	$pagosEspera[] = array(
+	$pagos[] = array(
 		'tipo' => $row['tipo'],
 		'ndocumento' => $row['ndocumento'],
 		'monto' => $row['monto'],
-		'observacion' => $row['observacion']);
+		'observacion' => $row['observacion'],
+		'estado' => $row['estado']);
 }
 
 ?>
@@ -85,14 +85,16 @@ while ($row = $s->fetch()) {
 		<th>Oro</th>
 		<th>Observacion</th>
 	</tr>
-	<?php foreach ($comprasEspera as $compraEspera): ?>
+	<?php foreach ($compras as $compra): 
+			if ($compra['estado'] == 'Espera'){	?>
 	<tr>
-		<td><img style="width:70px" src="../img/productos/<?= $compraEspera['foto'] ?>"></td>
-		<td><?= $compraEspera['talla'] ?></td>
-		<td><?= $compraEspera['oro'] ?></td>
-		<td><?= $compraEspera['observacion'] ?></td>
+		<td><img style="width:70px" src="../img/productos/<?= $compra['foto'] ?>"></td>
+		<td><?= $compra['talla'] ?></td>
+		<td><?= $compra['oro'] ?></td>
+		<td><?= $compra['observacion'] ?></td>
 	</tr>
-	<?php endforeach ?>
+	<?php }
+	endforeach ?>
 </table>
 
 <p>Pagos en espera</p>
@@ -103,14 +105,16 @@ while ($row = $s->fetch()) {
 		<th>Monto</th>
 		<th>Observacion</th>
 	</tr>
-	<?php foreach ($pagosEspera as $pagoEspera): ?>
+	<?php foreach ($pagos as $pago):
+			if ($pago['estado'] == 'Espera'){	?>
 	<tr>
-		<td><?= $pagoEspera['tipo'] ?></td>
-		<td><?= $pagoEspera['ndocumento'] ?></td>
-		<td><?= $pagoEspera['monto'] ?></td>
-		<td><?= $pagoEspera['observacion'] ?></td>
+		<td><?= $pago['tipo'] ?></td>
+		<td><?= $pago['ndocumento'] ?></td>
+		<td><?= $pago['monto'] ?></td>
+		<td><?= $pago['observacion'] ?></td>
 	</tr>
-	<?php endforeach ?>
+	<?php }
+	 endforeach ?>
 </table>
 
 <p>Articulos Aprobados y Comprados</p>
@@ -122,15 +126,20 @@ while ($row = $s->fetch()) {
 		<th>Observacion</th>
 		<th>Precio</th>
 	</tr>
+	<?php foreach ($compras as $compra): 
+			if ($compra['estado'] != 'Espera'){
+			$compraTotal += $compra['precio']	?>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td><img style="width:70px" src="../img/productos/<?= $compra['foto'] ?>"></td>
+		<td><?= $compra['talla'] ?></td>
+		<td><?= $compra['oro'] ?></td>
+		<td><?= $compra['observacion'] ?></td>
+		<td><?= $compra['precio'] ?></td>
 	</tr>
+	<?php }
+	endforeach ?>
 </table>
-<p>Total de compras <b>TOTAL</b></p>
+<p>Total de compras <b><?= $compraTotal ?></b></p>
 
 <p>Pagos Aprobados</p>
 <table border="1">
@@ -140,13 +149,18 @@ while ($row = $s->fetch()) {
 		<th>Monto</th>
 		<th>Observacion</th>
 	</tr>
+	<?php foreach ($pagos as $pago):
+			if ($pago['estado'] != 'Espera'){
+			$pagoTotal += $pago['monto']		?>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td><?= $pago['tipo'] ?></td>
+		<td><?= $pago['ndocumento'] ?></td>
+		<td><?= $pago['monto'] ?></td>
+		<td><?= $pago['observacion'] ?></td>
 	</tr>
+	<?php }
+	 endforeach ?>
 </table>
-<p>Total de pagos <b>TOTAL</b></p>
+<p>Total de pagos <b><?= $pagoTotal ?></b></p>
 
-<p>Total <b>TOTAL</b></p>
+<p>Balance de Compras <b><?= $compraTotal - $pagoTotal ?></b></p>
