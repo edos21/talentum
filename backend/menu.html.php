@@ -78,9 +78,10 @@
 					<li><a href="#">Clientes</a>
 						<ul class="submenu">
 						<!--li*5>a[href=#]{sub enlace $}-->
-						<li><a href="estadoCliente.php"><img src="../img/iconadmin/add.png"> Consultar Estado</a></li>
-						<li><a href="ajusteCliente.php"><img src="../img/iconadmin/money.png"> Ajustes de Saldo</a></li>
-						<li><a href="modificarAjuste.php"><img src="../img/iconadmin/edit.png"> Modificar Ajustes</a></li>
+						<li><a href="movimientoEspera.php"><img src="../img/iconadmin/add.png"> Movimientos en Espera</a></li>
+						<li><a href="modificarMovimientos.php"><img src="../img/iconadmin/edit.png"> Modificar Movimientos</a></li>
+						<li><a href="registraPago.php"><img src="../img/iconadmin/money.png"> Registrar Pago</a></li>
+            <li><a href="recuperaClave.php"><img src="../img/iconadmin/pass.png"> Recuperar Claves</a></li>
 						</ul>
 					</li>
 			</ul>
