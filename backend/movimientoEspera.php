@@ -47,6 +47,7 @@ catch(PDOException $e){
 }
 while ($row = $s->fetch()) {
 	$pagos[] = array(
+		'id' => $row['id'],
 		'tipo' => $row['tipo'],
 		'ndocumento' => $row['ndocumento'],
 		'monto' => $row['monto'],
@@ -74,27 +75,9 @@ while ($row = $s->fetch()) {
 		'monto' => $row['monto']);
 }
 
+include '../includes/header.html';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript">
-	    function recargarPre(val){
-	 	
-	         $('#precio').val('Calculando...');
-	         oro = $('#oro').val();
-	         $.ajax({
-	          url: 'cargarPre.php',
-	          data: 'id='+val+'&oro='+oro,
-	          success: function(resp){
-	           $('#precio').val(resp)
-	           }
-	        });
-	      }
-	</script>
-</head>
-<body>
+
 	<p>Articulos en espera</p>
 	<table border="1">
 		<tr>
@@ -115,17 +98,19 @@ while ($row = $s->fetch()) {
 			<td><?= $compra['oro'] ?></td>
 			<td><?= $compra['observacion'] ?></td>
 			<form action="aprobarCompra.php" method="post">
-				<td><select onChange="recargarPre(this.value)" name="costo" id="costo">
-					<option value="">Seleccione...</option>
-					<?php foreach($precios as $precio): ?>
-					<option value="<?= $precio['id'] ?>"><?= $precio['descripcion'] ?></option>
-					<?php endforeach; ?>
-				</select></td>
+				<td>
+					<select onChange="recargarPre(this.value)" name="costo" id="costo">
+						<option value="">Seleccione...</option>
+						<?php foreach($precios as $precio): ?>
+							<option value="<?= $precio['id'] ?>"><?= $precio['descripcion'] ?></option>
+						<?php endforeach; ?>
+					</select>
+				</td>
 				<td><input type="text" name="precio" id="precio"></td>
 				<td>
 					<input type="hidden" id="oro" value="<?= $compra['oro'] ?>">
-					<input type="hidden" value="<?= $compra['id'] ?>">
-					<input type="hidden" value="<?= $compra['correo'] ?>">
+					<input type="hidden" name="id" value="<?= $compra['id'] ?>">
+					<input type="hidden" name="correo" value="<?= $compra['correo'] ?>">
 					<input type="submit" value="Aprobar">
 				</td>
 			</form>
@@ -140,6 +125,7 @@ while ($row = $s->fetch()) {
 			<th>Nro Documento</th>
 			<th>Monto</th>
 			<th>Observacion</th>
+			<th>Aprobar</th>
 		</tr>
 		<?php foreach ($pagos as $pago):
 				if ($pago['estado'] == 'Espera'){	?>
@@ -148,9 +134,14 @@ while ($row = $s->fetch()) {
 			<td><?= $pago['ndocumento'] ?></td>
 			<td><?= $pago['monto'] ?></td>
 			<td><?= $pago['observacion'] ?></td>
+			<td>
+				<form action="aprobarPago.php" method="post">
+					<input type="hidden" name="id" value="<?= $pago['id'] ?>">
+					<input type="submit" value="Aprobar">
+				</form>
+			</td>
 		</tr>
 		<?php }
 		 endforeach ?>
 	</table>
-</body>
-</html>
+<?php include '../includes/footer.html'; ?>

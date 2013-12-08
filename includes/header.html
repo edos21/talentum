@@ -23,6 +23,18 @@
            }
         });
       }
+    function recargarPre(val){
+    
+           $('#precio').val('Calculando...');
+           oro = $('#oro').val();
+           $.ajax({
+            url: 'cargarPre.php',
+            data: 'id='+val+'&oro='+oro,
+            success: function(resp){
+             $('#precio').val(resp)
+             }
+          });
+        }  
     </script>
   </head>
     <body>
@@ -34,12 +46,12 @@
       
         <nav class="barraNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="categorias.html.php">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="../">Inicio</a></li>
+            <li><a href="../categorias.html.php">Productos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
             <li>
               
-              <a href="contacto.html">Cliente</a>
+              <a href="#">Cliente</a>
               <ul class="barraNavSubmenu">
                 <li><a href="#">Ingresar</a></li>
                 <li><a href="#">Registrarse</a></li>
@@ -57,19 +69,19 @@
         <div class="grid_4">
           <a href="#">
           
-          <img src="img/logo.png" alt="">
+          <img src="../img/logo.png" alt="">
           </a>
         </div>
         
         <div class="grid_4 push_4">
           <div class="row oro">
             <div class="orito">
-              <img src="img/oro.png" alt="">
+              <img src="../img/oro.png" alt="">
             </div>
           <div class="precioro">
             <p>Precio del Oro</p>
             <p>99999,99 $
-            <img src="img/FlechaArriba.png" alt="">
+            <img src="../img/FlechaArriba.png" alt="">
             </p>
           </div>
           </div>
@@ -123,9 +135,10 @@
           <li><a href="#">Clientes</a>
             <ul class="submenu">
             <!--li*5>a[href=#]{sub enlace $}-->
-            <li><a href="estadoCliente.php"><img src="../img/iconadmin/add.png"> Consultar Estado</a></li>
-            <li><a href="ajusteCliente.php"><img src="../img/iconadmin/money.png"> Ajustes de Saldo</a></li>
-            <li><a href="modificarAjuste.php"><img src="../img/iconadmin/edit.png"> Modificar Ajustes</a></li>
+            <li><a href="movimientoEspera.php"><img src="../img/iconadmin/add.png"> Movimientos en Espera</a></li>
+            <li><a href="modificarMovimientos.php"><img src="../img/iconadmin/edit.png"> Modificar Movimientos</a></li>
+            <li><a href="registraPago.php"><img src="../img/iconadmin/money.png"> Registrar Pago</a></li>
+            <li><a href="recuperaClave.php"><img src="../img/iconadmin/pass.png"> Recuperar Claves</a></li>
             </ul>
           </li>
       </ul>
