@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 include '../lib/conexion.php';
 
 // Cargar articulos en espera
@@ -78,7 +78,7 @@ while ($row = $s->fetch()) {
 include '../includes/header.html';
 ?>
 
-	<p>Articulos en espera</p>
+	<p><b>Articulos en espera</b></p>
 	<table border="1">
 		<tr>
 			<th>Cliente</th>
@@ -117,8 +117,8 @@ include '../includes/header.html';
 		</tr>
 		<?php endforeach ?>
 	</table>
-
-	<p>Pagos en espera</p>
+<br>
+	<p><b>Pagos en espera</b></p>
 	<table border="1">
 		<tr>
 			<th>Tipo</th>

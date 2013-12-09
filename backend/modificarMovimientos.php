@@ -1,5 +1,5 @@
 <?php 
-
+error_reporting(0);
 include '../lib/conexion.php';
 
 	try{
@@ -27,7 +27,7 @@ include '../includes/header.html'; ?>
 
 <form action="modificaMovimiento.php" method="post">
 	<label>Correo del cliente a Modificar</label>
-	<input type="text" name="correo" id="correo" list="correos">
+	<input type="text" name="correo" id="correo" list="correos" autocomplete="off">
 	<datalist id="correos">
 		<?php foreach($clientes as $cliente): ?>
 		<option value="<?= $cliente['correo'] ?>">

@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 include '../lib/conexion.php';
 
 //buscar el id en funcion de su correo
@@ -99,7 +99,7 @@ while ($row = $s->fetch()) {
 include '../includes/header.html';
 ?>
 
-	<p>Articulos en espera</p>
+	<p><b>Articulos en espera</b></p>
 	<table border="1">
 		<tr>
 			<th>Articulo</th>
@@ -158,24 +158,33 @@ include '../includes/header.html';
 		</tr>
 		<?php endforeach ?>
 	</table>
-
-	<p>Pagos en espera</p>
+<br>
+	<p><b>Pagos en espera</b></p>
 	<table border="1">
 		<tr>
 			<th>Tipo</th>
 			<th>Nro Documento</th>
 			<th>Monto</th>
 			<th>Observacion</th>
+			<th>Estado</th>
 			<th>Herramientas</th>
 		</tr>
 		<?php foreach ($pagos as $pago):	?>
 		<tr>
-			<td><?= $pago['tipo'] ?></td>
-			<td><?= $pago['ndocumento'] ?></td>
-			<td><?= $pago['monto'] ?></td>
-			<td><?= $pago['observacion'] ?></td>
+			<form action="actualizaPago.php" method="post">
+			<td><input type="text" value="<?= $pago['tipo'] ?>" name="tipo" id="tipo"></td>
+			<td><input type="text" value="<?= $pago['ndocumento'] ?>" name="ndocumento" id="ndocumento"></td>
+			<td><input type="text" value="<?= $pago['monto'] ?>" name="monto" id="monto" size="4"></td>
+			<td><input type="text" value="<?= $pago['observacion'] ?>" name="observacion" id="observacion"></td>
 			<td>
-				<form action="modificaPago.php" method="post">
+			<select name="estado" id="estado">
+				<option><?= $pago['estado'] ?></option>
+				<option disabled>----------</option>
+				<option>Aprobado</option>
+				<option>Espera</option>
+			</select>
+			</td>	
+			<td>				
 					<input type="hidden" name="id" value="<?= $pago['id'] ?>">
 					<input type="submit" value="Modificar">
 				</form>
