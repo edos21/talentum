@@ -26,27 +26,25 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Talemtum Joyas | Inicio</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/960_12_col.css">
-  <!--<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>-->
-  <!--<script src="js/cufon-yui.js" type="text/javascript"></script>-->
-  <!--<script src="js/GreyscaleBasic.font.js" type="text/javascript"></script>-->
-  <!--  <link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
-  <link type="text/css" href="css/jquery.ui.core.css" rel="stylesheet" />
-  <link type="text/css" href="css/jquery.ui.slider.css" rel="stylesheet" />-->
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-  <script language="JavaScript" type="text/javascript" src="local 5- 6x8_VR.37/files/KeyShotVR.js"></script>
-  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
-  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-
-  <script src="js/jquery.cycle2.min.js" type="text/javascript"></script>
-  <script src="js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
+<meta charset="UTF-8">
+<title>Talemtum Joyas | Inicio</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/960_12_col.css">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<script language="JavaScript" type="text/javascript" src="local 5- 6x8_VR.37/files/KeyShotVR.js"></script>
+<link rel="stylesheet" href="css/horizontal.css">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.cycle2.min.js" type="text/javascript"></script>
+<script src="js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/vendor.js"></script>
+<script type="text/javascript" src="js/sly.min.js"></script>
+<script type="text/javascript" src="js/horizontal.js"></script>
+  
   <script language="JavaScript" type="text/javascript">
+    
+    
     var keyshotVR;
 
     function initKeyShotVR() {
@@ -78,8 +76,6 @@
     window.onload = initKeyShotVR;
 </script>
 
- 
- 
  <script type="text/javascript">
  $(document).ready(function() {
  $('a[name=modal]').click(function(e) {
@@ -190,6 +186,9 @@
 
 
   <div class="slider">
+    <div class="sliderBarra">
+      <input type="search">
+    </div>
     <div class="cycle-slideshow" data-cycle-next="#next3" data-cycle-prev="#prev3" data-cycle-tile-vertical=false data-cycle-speed="1000">
 
       <img src="img/slider/1.jpg">
@@ -204,28 +203,85 @@
 
   <div class="container_12 contenedorprincipal ContDegradado">
     <div class="sliderpequeno ">
-      <div class="cycle-slideshow" data-cycle-slides="li" data-cycle-fx=carousel data-cycle-timeout=0 data-cycle-next="#next" data-cycle-prev="#prev" data-cycle-pager="#pager">
-        <?php foreach($categorias as $categoria): ?>
-        <!--al colocar la etiqueta a se daña, pero es necesario colocar el hipervinculo, revisa como colocar ambos-->
-        <div class="WrapSlidePeq">
-          <li>
-            <a href="subcategoria.html.php?categoria=<?php echo $categoria['id'] ?>">
-              <img style="width:140px" src="img/<?php echo $categoria['img'] ?>">
-              <p>
-                <?php echo $categoria[ 'nombre'] ?>
-              </p>
-            </a>
-          </li>
-        </div>
-        <?php endforeach; ?>
+<div class="pagespan ">
+  <div class="wrap">
+
+
+
+    <div class="frame" id="basic" style="overflow: hidden;">
+      <ul style="-webkit-transform: translateZ(0px) translateX(-228px); width: 6840px;">
+        <li>
+          <img src="img/a1.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a2.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a3.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a4.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a5.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a5.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a5.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a5.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+        <li>
+          <img src="img/a5.jpg" alt="">
+          <div class="ContCatgTxt">
+            <p>Anillo</p>
+          </div>
+             
+        </li>
+      </ul>
+    </div>
+    <div class="scrollbar">
+      <div class="handle" style="-webkit-transform: translateZ(0px) translateX(38px); width: 190px;">
+        <div class="mousearea"></div>
       </div>
-
-      <a class="sliderpequenoBoton BtnLeft " href=# id=prev>
-        < </a>
-          <a class="sliderpequenoBoton BtnRight" href=# id=next>></a>
-
-
-          <!--  <div class="cycle-pager" id=pager></div>-->
+    </div>
+  </div>
+</div>
     </div>
 
 
@@ -264,6 +320,18 @@
       <!--      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/InvertirOro" data-widget-id="402202542399950848">Tweets por @InvertirOro</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
 
+    </div>
+    <div class="grid_4">
+      <p>Mision</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, aliquid, praesentium, veniam distinctio voluptatum asperiores odit mollitia optio incidunt fugiat dignissimos ad dicta voluptatibus sequi hic adipisci recusandae. Impedit, sapiente.</p>
+    </div>
+    <div class="grid_4">
+      <p>Vision</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, aliquid, praesentium, veniam distinctio voluptatum asperiores odit mollitia optio incidunt fugiat dignissimos ad dicta voluptatibus sequi hic adipisci recusandae. Impedit, sapiente.</p>
+    </div>
+    <div class="grid_4">
+      <p>Lorem</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, aliquid, praesentium, veniam distinctio voluptatum asperiores odit mollitia optio incidunt fugiat dignissimos ad dicta voluptatibus sequi hic adipisci recusandae. Impedit, sapiente.</p>
     </div>
   </div>
   <footer>
