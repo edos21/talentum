@@ -25,19 +25,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Talemtum Joyas | Inicio</title>
+  <title>Talentum Joyas | Inicio</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/960_12_col.css">
-  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-  <script src="js/cufon-yui.js" type="text/javascript"></script>
-  <script src="js/GreyscaleBasic.font.js" type="text/javascript"></script>
-  <link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
-  <link type="text/css" href="css/jquery.ui.core.css" rel="stylesheet" />
-  <link type="text/css" href="css/jquery.ui.slider.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+  <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/horizontal.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery.cycle2.min.js" type="text/javascript"></script>
+  <script src="js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/vendor.js"></script>
+  <script type="text/javascript" src="js/sly.min.js"></script>
+  <script type="text/javascript" src="js/horizontal.js"></script>
 </head>
 <body>
-    <div class="fondoNegro colordegradado"></div>
+
 <header>
     <div class="BarraSuperior">
     
