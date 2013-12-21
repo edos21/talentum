@@ -33,13 +33,16 @@
 ?>
 		<div id="content">
 			<h2>Modificar / Eliminar SubCategoria</h2>
-			<a href="menu.html.php">Volver</a>
-			<table border="1">
+      <div class="push_10">
+          <a class="BtnVolver" href="menu.html.php">Volver</a>
+        </div>
+        <center>
+			<table  border="0" cellpadding="10">
 				<thead>
 					<tr>
-						<th>SubCategoria</th>
-						<th>Categoria</th>
-						<th>Opciones</th>
+						<th><b>SubCategoria</b></th>
+						<th><b>Categoria</b></th>
+						<th><b>Opciones</b></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -61,6 +64,7 @@
 					<?php endforeach; ?>
 				</tbody>
 			</table>
+			</center>
 		</div>
 <?php
 

@@ -38,8 +38,10 @@
 
 		?>	
 
-		<h2>Categoria Modificada</h2><br>
-		<a href="menu.html.php">Volver</a>
+        <h2>Categoria Modificada</h2>
+        <div class="push_10">
+          <a class="BtnVolver" href="menu.html.php">Volver</a>
+        </div>
 
 		<?php 
 

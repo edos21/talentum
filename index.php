@@ -367,7 +367,6 @@
         <ul>
           <li>Email: talentumjoyas@hotmail.com</li>
           <li>Teléfono: +58416-6572119</li>
-          <li>E-mail:</li>
         </ul>
       </div>
       <div class="grid_2 txtfooter">

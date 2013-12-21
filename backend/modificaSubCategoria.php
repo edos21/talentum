@@ -48,19 +48,21 @@
 
 ?>
 
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | SubCategorias</title>
-	</head>
-	<body>
+<?php
+	
+	include ('../includes/header.html');
+
+?>
 		<div id="content">
 			<h2>Modificar SubCategoria</h2>
-			<a href="modificarSubCategoria.php">Volver</a>
+			        <div class="push_10">
+          <a class="BtnVolver" href="modificarSubCategoria.php">Volver</a>
+        </div>
+
 			<?php foreach($subcategorias as $subcategoria): ?>
 				<form method="post" action="actualizaSubCategoria.php" enctype="multipart/form-data">
 					<label for="subcategoria">Nombre de la SubCategoria</label>
-					<input type="text" name="subcategoria" id="subcategoria" value="<?php echo $subcategoria['subnombre'] ?>">
+					<input type="text" name="subcategoria" id="subcategoria" value="<?php echo $subcategoria['subnombre'] ?>"> <br>
 					<label for="img">Imagen</label>
 					<input type="file" name="img" id="img" accept="image/*">
 					<label for="idcategoria">Categoria</label>
@@ -72,9 +74,14 @@
 						<?php endforeach; ?>
 					</select>
 					<input type="hidden" name="id" value="<?php echo $id ?>">
-					<input type="submit" value="Guardar">
+                <div class="Botonera">
+                  <input type="submit" value="Guardar">
+                </div>
 				</form>
 			<?php endforeach; ?>
 		</div>
-	</body>
-</html>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

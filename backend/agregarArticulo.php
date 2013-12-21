@@ -25,10 +25,14 @@
 
 <div id="content">
   <h2><img src="../img/iconadmin/add.png" alt="">Agregar Articulos</h2>
-  <a href="menu.html.php">Volver</a>
+  
+  <div class="push_10">
+    
+  <a class="BtnVolver" href="menu.html.php">Volver</a>
+  </div>
   <form method="post" action="guardarArticulo.php" enctype="multipart/form-data" class="FormAdmin">
 
-    <div class="grid_3">
+    <div class="grid_4">
 
       <label for="articulo">Articulo</label>
       <input type="text" name="articulo" id="articulo">
@@ -53,7 +57,7 @@
     </div>
 
 
-    <div class="grid_4">
+    <div class="grid_3">
 
       <label for="foto1">Foto 1</label>
       <input type="file" name="foto1" id="foto1" accept="image/*">
@@ -84,7 +88,7 @@
     </div>
     <div class="clearfix"></div>
     <hr>
-    <div class="Botonera">
+    <div class="Botonera" >
       <input type="submit" value="Guardar">
     </div>
   </form>

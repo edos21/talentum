@@ -36,7 +36,10 @@
 
 			<div id="content">
 				<h2>Modificar / Eliminar Categoria</h2>
-				<a href="menu.html.php"><img src="../img/iconadmin/edit.png" alt=""> Volver</a> <br>
+				<div class="push_10">
+                  <a class="BtnVolver" href="menu.html.php">Volver</a>
+               </div>
+		
 				<center>
 				<table class="TablaEstilo" border="0">
 					<thead>

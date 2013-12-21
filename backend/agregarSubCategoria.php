@@ -25,7 +25,9 @@
 ?>
 		<div id="content">
 			<h2>Agregar SubCategoria</h2>
-			<a href="menu.html.php">Volver</a>
+        <div class="push_10">
+          <a class="BtnVolver" href="menu.html.php">Volver</a>
+        </div>
 			<form method="post" action="guardarSubCategoria.php" enctype="multipart/form-data"> <br>
 				<label for="subcategoria">Nombre de la SubCategoria</label>
 				<input type="text" name="subcategoria" id="subcategoria"><br>
@@ -38,7 +40,9 @@
 					<option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nombre'] ?></option>
 					<?php endforeach; ?>
 				</select> <br> <br>
-				<input type="submit" value="Guardar">
+				<div class="Botonera" >
+                  <input type="submit" value="Guardar">
+                </div>
 			</form>
 		</div>
 <?php

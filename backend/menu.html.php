@@ -1,37 +1,102 @@
 <!Doctype html>
 <html>
 	<head>
-  <meta charset="UTF-8">
-  <title>Talemtum Joyas | Inicio</title>
+
+  
+    <meta charset="UTF-8">
+  <title>Talentum Joyas | Inicio</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/960_12_col.css">
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
+  <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../css/horizontal.css">
+  <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+  <script src="../js/jquery.cycle2.min.js" type="text/javascript"></script>
+  <script src="../js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="../js/vendor.js"></script>
+  <script type="text/javascript" src="../js/sly.min.js"></script>
+  <script type="text/javascript" src="../js/horizontal.js"></script>
   <link rel="stylesheet" href="../css/menu-css3.css">
 	</head>
 	<body>
     <div class="fondoNegro colordegradado"></div>
-      <header>
+<header>
+   <div class="BarraSuperior">
+
+      <div class="container_12">
+
+        <nav class="barraNav">
+          <ul>
+            <li>
+              <a href="#">Inicio</a>
+            </li>
+            <li>
+              <a href="../categorias.html.php">Productos</a>
+            </li>
+            <li>
+              <a href="../contacto.html">Contacto</a>
+            </li>
+            <li>
+
+              <a href="#">Cliente</a>
+              <ul class="barraNavSubmenu">
+              <?php if ($_SESSION['login'] != true){ ?>
+                <li>
+                  <a href="#login" name="modal">Ingresar</a>
+                </li>
+                <li>
+                  <a href="#dialog" name="modal">Registrarse</a>
+                </li>
+              <?php }else{ ?>
+                <li>
+                  <a href="../cliente/pago.php">Pagar</a>
+                </li>
+                <li>
+                  <a href="../cliente/estado.php">Estado Compras</a>
+                </li>
+                <li>
+                  <a href="../cliente/modificar.php">Actualizar Datos</a>
+                </li>
+                <li>
+                  <a href="../lib/salir.php">Cerrar Sesion</a>
+                </li>
+              <?php } ?>
+              </ul>
+
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </div>
     <div class="container_12 barraPrincipal">
       <div class="grid_12">
-        <div class="grid_4 logo">
+        <div class="grid_4">
           <a href="#">
-          
-          <img src="../img/logo.png" alt="">
+
+            <img src="../img/logo.png" alt="">
           </a>
         </div>
-        
+
         <div class="grid_4 push_4">
-          <nav class="barraNav">
-            <ul>
-              <li><a href="../">Inicio</a></li>
-              <li><a href="../categorias.html.php">Productos</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul>
-          </nav>
-        </div> 
+          <div class="row oro">
+            <div class="orito">
+              <img src="../img/oro.png" alt="">
+            </div>
+            <div class="precioro">
+              <p>Precio del Oro</p>
+              <p>99999,99 $
+                <img src="../img/FlechaArriba.png" alt="">
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+</header>
  
 		<div class="container_12 contenedorprincipal">
 			<div class= "grid_2">
@@ -88,7 +153,7 @@
 			<br>
 
 		</div>
-<footer>
+  <footer>
     <div class="container_12 contfooter colordegradado2">
       <img src="../img/anillos.png" alt="" class="anillofooter">
       <div class="grid_3 txtfooter">
@@ -96,9 +161,8 @@
           Talentum Joyas
         </p>
         <ul>
-          <li>Dirección: Av. 20 con calle 28 y 29, Edificio Balmoral, Piso 1.</li>
+          <li>Email: talentumjoyas@hotmail.com</li>
           <li>Teléfono: +58416-6572119</li>
-          <li>E-mail:</li>
         </ul>
       </div>
       <div class="grid_2 txtfooter">
@@ -106,21 +170,38 @@
           Sitemap
         </p>
         <ul>
-          <li><a href="../">Inicio</a></li>
-          <li><a href="../categorias.html.php ">Portafolio</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="../backend/menu.html.php">Admin</a></li>
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Portafolio</a>
+          </li>
+          <li>
+            <a href="#">Contacto</a>
+          </li>
+          <li>
+            <a href="../backend/menu.html.php">Admin</a>
+          </li>
         </ul>
       </div>
       <div class="grid_3 txtfooter">
         <p>
           Redes Sociales
         </p>
-            <ul class="listfootercontac listfootersocial">
-              <li><a href="#"><img src="../img/fb.png" alt=""> Facebook</a></li>
-              <li><a href="#"><img src="../img/tw.png" alt=""> Twitter</a></li>
-              <li><a href="#"><img src="../img/yt.png" alt=""> Google+</a></li>
-            </ul>
+        <ul class="listfootercontac listfootersocial">
+          <li>
+            <a href="#">
+              <img src="../img/fb.png" alt=""> Facebook</a>
+          </li>
+          <li>
+            <a href="http://www.twitter.com/talentumjoyas" target="_blank">
+              <img src="../img/tw.png" alt=""> Twitter</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../img/yt.png" alt=""> Google+</a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
