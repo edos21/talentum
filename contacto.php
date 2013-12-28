@@ -1,31 +1,13 @@
 <?php
+
   session_start();
   error_reporting(0);
   include 'lib/conexion.php';
 
-  try{
-
-    $sql = 'SELECT subcategoria.id, subcategoria.subnombre, subcategoria.img, categoria.nombre FROM subcategoria INNER JOIN categoria ON categoria.id = subcategoria.idcategoria WHERE idCategoria=:idcategoria';
-
-    $s = $pdo->prepare($sql);
-    $s->bindValue(':idcategoria', $_GET['categoria']);
-    $s->execute();
-
-    while($row = $s->fetch()){
-      $subcategorias[]= array(
-        'id'=>$row['id'],
-        'subnombre'=>$row['subnombre'],
-        'img'=>$row['img'],
-        'nombre'=>$row['nombre']);
-    }
-  }
-  catch(PDOException $e){
-    echo "error al cargar las categorias".$e;
-    exit();
-  }
-
-    
 ?>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,7 +35,6 @@
   
 </head>
 <body>
-
 <header>
     <div class="BarraSuperior">
 
@@ -129,31 +110,62 @@
       </div>
     </div>
   </header>
-
   
-  <div class="container_12 contenedorprincipal">
-  <h2 class="TextCategoria"><?php echo $subcategorias[0]['nombre'] ?></h2>
-    <?php
-    if (count($subcategorias) > 0){
-      foreach($subcategorias as $subcategoria): ?>
-      <div class="grid_2">
-        <div class="ContCatg">        
-          <a href="tipo.html.php?subcategoria=<?php echo $subcategoria['id'] ?>">
-          <img style="width:140px" src="img/<?php echo $subcategoria['img'] ?>" alt="">
-          <div class="ContCatgTxt">
-            <p><?php echo $subcategoria['subnombre'] ?></p>
-          </div>
-          </a>
-        </div>
-      </div>
-      <?php endforeach; 
-      }else{?>
-      <center>
-        <h2>No se encontraron SubCategorias</h2>
-        <a href="categorias.html.php">Volver a Categorias</a>
-      </center>
+  <div class="container_12 contenedorprincipal ContContact">
+    
+    <h2 class="TextCategoria">Contacto</h2>
+    
+    <div class="grid_3 Contacto">
+      <ul>
+        <li>
       
-      <?php } ?>
+        <li><img src="img/phone32.png" alt="">
+        <b>Teléfono:</b> +58 416-6572119</li>
+        <li><img src="img/mailopened32.png" alt="">
+        <b>Email</b> xxxxxxxxxxxx@gmail.com</li>
+        <li></li>
+                <div class="CodeQR"><img src="img/qrcod.png" alt=""></div>
+      </ul>
+    </div>
+    <div class="grid_4">
+      
+    <form class="contact_form" action="#" method="post">
+    <ul>
+       <li>
+           <label for="name">Nombre y Apellido:</label>
+           <input type="text"  placeholder="Johan Ricardo" required />
+       </li>
+       <li>
+           <label for="telf">Teléfono:</label>
+           <input type="text" name="telf" placeholder="0123 1234567" required />
+       </li>
+       <li>
+           <label for="email">Email:</label>
+           <input type="email" name="email" placeholder="xxxxxxx@ejemplo.com" required />
+       </li>
+       <li>
+           <label for="Mensaje">Mensaje:</label>
+           <textarea name="Mensaje" cols="40" rows="6" required ></textarea>
+       </li>
+        <li>
+          <button class="submit" type="submit">Enviar</button>
+        </li>
+    </ul>
+</form>
+
+      
+    </div>
+    <div class="grid_3 Social">
+      <b>
+        <span class="TextCategoria">Redes sociales</span>
+      </b><br>
+      <a href="#"><img src="img/Twitter.png" alt=""></a>
+      <a href="#"><img src="img/Facebook.png" alt=""></a>
+      <a href="#"><img src="img/YouTube.png" alt=""></a>
+    </div>
+
+
+
   </div>
   <footer>
     <div class="container_12 contfooter colordegradado2">
@@ -173,9 +185,9 @@
           Sitemap
         </p>
         <ul>
-          <li><a href="./">Inicio</a></li>
-          <li><a href="categorias.html.php">Productos</a></li>
-          <li><a href="contacto.php">Contacto</a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Portafolio</a></li>
+          <li><a href="#">Contacto</a></li>
           <li><a href="backend/menu.html.php">Admin</a></li>
         </ul>
       </div>
@@ -191,8 +203,7 @@
       </div>
     </div>
   </footer>
-  
-  <?php
+<?php
 	
 	include ('/includes/ModalBox.html');
 
