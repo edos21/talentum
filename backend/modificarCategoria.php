@@ -34,11 +34,11 @@
 ?>
 
 
-			<div id="content">
+
 				<h2>Modificar / Eliminar Categoria</h2>
 				<div class="push_10">
                   <a class="BtnVolver" href="menu.html.php">Volver</a>
-               </div>
+        </div>
 		
 				<center>
 				<table class="TablaEstilo" border="0">
@@ -68,7 +68,7 @@
 				</table>
 				</center>
 			</div>
-		</div>
+
 
 <?php
 

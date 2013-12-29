@@ -17,6 +17,19 @@
 	}
 
 ?>
+<?php
+	
+	include ('../includes/header.html');
 
-	<h2>Categoria Borrada</h2><br>
-	<a href="menu.html.php">Volver</a>
+?>
+		<center>
+			<h2>Categoria Borrada</h2><br>
+			<a class="BtnVolver" href="menu.html.php">Volver</a>
+		</center>
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

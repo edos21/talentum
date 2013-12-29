@@ -8,10 +8,22 @@
 	if ($precio == "") 
 	{
 		?>
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Favor ingrese el precio</h2><br>
 		<a href="javascript:history.back()">Volver</a>
+		</center>
+		<br>
+		<br>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 		<?php
 	}else{
 		try {
@@ -42,11 +54,23 @@
 		}
 
 		?>	
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Movimiento Modificado</h2><br>
 		<a href="modificarMovimientos.php">Volver a Modificar Movimientos</a><br>
-		<a href="menu.html.php">Ir al Menu</a>
+		<a class="BtnVolver"  href="menu.html.php">Ir al Menu</a>
+		</center>
+		<br>
+		<br>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 		<?php 
 
 	}

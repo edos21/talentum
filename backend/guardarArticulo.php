@@ -20,10 +20,22 @@ if (isset($_FILES['foto1']['name'])){
 
 if($articulo == "" || $categoria == "" || $subcategoria == "" || $joya1 == "" || $foto1 == ""){
 	?>
+<?php
+	
+	include ('../includes/header.html');
 
-	<h2>Favor Ingrese todos los datos Requeridos</h2>
-	<a href="javascript:history.back()">Volver</a>
+?>
+	<center>
+		
+	<h2>Favor Ingrese todos los datos Requeridos</h2><br>
+	<a class="BtnVolver" href="javascript:history.back()">Volver</a>
+	<br><br>
+	</center>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 	<?php
 }else{
 	try{
@@ -68,13 +80,25 @@ if($articulo == "" || $categoria == "" || $subcategoria == "" || $joya1 == "" ||
 		move_uploaded_file($_FILES['joya4']['tmp_name'],$directorio.$_FILES['joya4']['name']);
 		move_uploaded_file($_FILES['foto4']['tmp_name'],$directorio.$_FILES['foto4']['name']);
 		?>
+<?php
+	
+	include ('../includes/header.html');
 
+?>
 			<h2>Articulo Guardado</h2><br>
 			<a href="agregarArticulo.php">Agregar otro Articulo</a>
-			<a href="menu.html.php">Volver al menu</a>
+			<a class="BtnVolver"  href="menu.html.php">Volver al menu</a>
+		<br>
+		<br>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 		<?php
+		
 	}
+	
 
 	catch(PDOException $e){
 

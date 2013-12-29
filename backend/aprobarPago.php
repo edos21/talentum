@@ -20,7 +20,20 @@
 		}
 
 		?>	
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Pago Aprobado</h2><br>
 		<a href="movimientoEspera.php">Continuar Aprobando Movimientos</a><br>
-		<a href="menu.html.php">Ir al Menu</a>
+		<a class="BtnVolver" href="menu.html.php">Ir al Menu</a>
+		</center>
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

@@ -3,7 +3,7 @@
 	include ('../includes/header.html');
 
 ?>
-		<div id="content">
+
 			<h2>Agregar Categoria</h2>
         <div class="push_10">
           <a class="BtnVolver" href="menu.html.php">Volver</a>
@@ -21,7 +21,7 @@
 			</form>
 			</div>
 		
-		</div>
+
 <?php
 
 	include ('../includes/footer.html');

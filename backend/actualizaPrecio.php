@@ -8,10 +8,22 @@
 	if ($descripcion == "" || $monto== "") 
 	{
 		?>
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Favor ingrese todos los datos</h2><br>
-		<a href="javascript:history.back()">Volver</a>
+		<a  class="BtnVolver"  href="javascript:history.back()">Volver</a>
+		</center>
+		<br>
+		<br>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 		<?php
 	}else{
 		try {
@@ -34,10 +46,22 @@
 		}
 
 		?>	
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Precio Modificado</h2><br>
-		<a href="menu.html.php">Volver</a>
+		<a class="BtnVolver" href="menu.html.php">Volver</a>
+		</center>
+		<br>
+		<br>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 		<?php 
 
 	}

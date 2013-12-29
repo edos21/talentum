@@ -27,15 +27,16 @@
 	}
 ?>
 
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Precios</title>
-	</head>
-	<body>
-		<div id="content">
+<?php
+	
+	include ('../includes/header.html');
+
+?>
+		<center>
 			<h2>Modificar Precios</h2>
-			<a href="modificarPrecios.php">Volver</a>
+			<br>
+			<a class="BtnVolver" href="modificarPrecios.php">Volver</a>
+			<br>
 			<?php foreach($precios as $precio): ?>
 				<form method="post" action="actualizaPrecio.php">
 					<label for="descripcion">Descripcion</label>
@@ -46,6 +47,11 @@
 					<input type="submit" value="Guardar">
 				</form>
 			<?php endforeach; ?>
-		</div>
-	</body>
-</html>
+		</center>
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

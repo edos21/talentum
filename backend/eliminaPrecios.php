@@ -17,6 +17,19 @@
 	}
 
 ?>
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 	<h2>Precio Borrado</h2><br>
-	<a href="menu.html.php">Volver</a>
+	<a class="BtnVolver" href="menu.html.php">Volver</a>
+			</center>
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

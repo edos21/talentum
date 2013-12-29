@@ -17,7 +17,21 @@
 	}
 
 ?>
+<?php
+	
+	include ('../includes/header.html');
+
+?>
+		<center>
 
 	<h2>Pago Borrado</h2><br>
 	<a href="modificarMovimientos.php">Volver a Modificar Movimientos</a><br>
-	<a href="menu.html.php">Volver</a>
+	<a class="BtnVolver"  href="menu.html.php">Volver</a>
+		</center>
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

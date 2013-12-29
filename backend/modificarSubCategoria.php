@@ -31,7 +31,7 @@
 	include ('../includes/header.html');
 
 ?>
-		<div id="content">
+
 			<h2>Modificar / Eliminar SubCategoria</h2>
       <div class="push_10">
           <a class="BtnVolver" href="menu.html.php">Volver</a>
@@ -65,7 +65,7 @@
 				</tbody>
 			</table>
 			</center>
-		</div>
+
 <?php
 
 	include ('../includes/footer.html');

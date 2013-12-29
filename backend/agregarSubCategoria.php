@@ -23,7 +23,7 @@
 	include ('../includes/header.html');
 
 ?>
-		<div id="content">
+
 			<h2>Agregar SubCategoria</h2>
         <div class="push_10">
           <a class="BtnVolver" href="menu.html.php">Volver</a>
@@ -41,10 +41,10 @@
 					<?php endforeach; ?>
 				</select> <br> <br>
 				<div class="Botonera" >
-                  <input type="submit" value="Guardar">
-                </div>
+           <input type="submit" value="Guardar">
+        </div>
 			</form>
-		</div>
+
 <?php
 
 	include ('../includes/footer.html');

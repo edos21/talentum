@@ -26,16 +26,18 @@
 	}
 
 ?>
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Articulos</title>
-	</head>
-	<body>
-		<div id="content">
-			<h2>Modificar / Eliminar Articulos</h2>
-			<a href="menu.html.php">Volver</a>
-			<table border="1">
+<?php
+
+	include ('../includes/header.html');
+
+?>
+
+			<h2>Modificar / Eliminar Articulos</h2>			
+			<div class="push_10">
+                  <a class="BtnVolver" href="menu.html.php">Volver</a>
+      </div>
+      <center>
+			<table class="TablaEstilo" border="0">
 				<thead>
 					<tr>
 						<th>Articulos</th>
@@ -60,6 +62,9 @@
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		</div>
-	</body>
-</html>
+			</center>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

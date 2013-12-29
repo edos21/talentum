@@ -53,7 +53,7 @@
 	include ('../includes/header.html');
 
 ?>
-		<div id="content">
+
 			<h2>Modificar SubCategoria</h2>
 			        <div class="push_10">
           <a class="BtnVolver" href="modificarSubCategoria.php">Volver</a>
@@ -79,7 +79,7 @@
                 </div>
 				</form>
 			<?php endforeach; ?>
-		</div>
+
 <?php
 
 	include ('../includes/footer.html');

@@ -26,16 +26,17 @@
 	}
 
 ?>
-<!Doctype html>
-<html>
-	<head>
-		<title>Talemtum Joyas | Precios</title>
-	</head>
-	<body>
-		<div id="content">
+<?php
+	
+	include ('../includes/header.html');
+
+?>
+		<center>
 			<h2>Modificar / Eliminar Precios</h2>
-			<a href="menu.html.php">Volver</a>
-			<table border="1">
+<br>
+                  <a class="BtnVolver" href="menu.html.php">Volver</a>
+<br>
+			<table class="TablaEstilo" border="0">
 				<thead>
 					<tr>
 						<th>Descipcion</th>
@@ -62,6 +63,13 @@
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		</div>
-	</body>
-</html>
+		</center>
+		
+		
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>

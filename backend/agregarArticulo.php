@@ -23,7 +23,7 @@
 
 ?>
 
-<div id="content">
+
   <h2><img src="../img/iconadmin/add.png" alt="">Agregar Articulos</h2>
   
   <div class="push_10">
@@ -92,7 +92,6 @@
       <input type="submit" value="Guardar">
     </div>
   </form>
-</div>
 
 <?php
 

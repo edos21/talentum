@@ -11,7 +11,7 @@
 		?>
 
 		<h2>Favor ingrese todos los datos</h2><br>
-		<a href="javascript:history.back()">Volver</a>
+		<a class="BtnVolver" href="javascript:history.back()">Volver</a>
 
 		<?php
 	}else{
@@ -41,10 +41,26 @@
 		}
 
 		?>	
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Categoria Modificada</h2><br>
-		<a href="menu.html.php">Volver</a>
 
+
+	  <a class="BtnVolver" href="menu.html.php">Volver</a>
+
+
+		</center>
+		<br>
+		<br>
+<?php
+
+	include ('../includes/footer.html');
+
+?>
 		<?php 
 	}
 

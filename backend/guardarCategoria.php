@@ -12,10 +12,17 @@
 	if ($nombre == "" || $img== "") 
 	{
 		?>
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+		<center>
 		<h2>Favor ingrese todos los datos</h2><br>
-		<a href="javascript:history.back()">Volver</a>
-
+		<a class="BtnVolver" href="javascript:history.back()">Volver</a>
+	</center>
+		<br>
+		<br>
 		<?php
 	}else
 	{
@@ -33,11 +40,23 @@
 			$directorio = '../img/';
 			move_uploaded_file($_FILES['img']['tmp_name'],$directorio.$img);
 		?>
+<?php
+	
+	include ('../includes/header.html');
 
+?>
+<center>
 			<h2>Categoria Guardada</h2><br>
 			<a href="agregarCategoria.php">Agregar otra Categoria</a>
-			<a href="menu.html.php">Volver al menu</a>
+			<a class="BtnVolver" href="menu.html.php">Volver al menu</a>
+	</center>
+		<br>
+		<br>
+<?php
 
+	include ('../includes/footer.html');
+
+?>
 		<?php
 		}
 
