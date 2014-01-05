@@ -1,7 +1,8 @@
 <?php
 
 	include '../lib/conexion.php';
-
+	include '../lib/seguridad.php';
+	
 	try {
 
 		$sql = 'UPDATE pagos SET
