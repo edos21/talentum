@@ -1,6 +1,7 @@
 <?php
 
 	include '../lib/conexion.php';
+	include '../lib/seguridad.php';
 
 	$nombre = $_POST['subcategoria'];
 	$categoria = $_POST['idcategoria'];
