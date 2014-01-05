@@ -161,69 +161,16 @@
 
     <div class="frame" id="basic" style="overflow: hidden;">
       <ul style="-webkit-transform: translateZ(0px) translateX(-228px); width: 6840px;">
-        <li>
-          <img src="img/a1.jpg" alt="">
+	<?php foreach($categorias as $categoria): ?>        
+	<li>
+	<a href="subcategoria.html.php?categoria=<?= $categoria['id']?>">
+          <img style="width:120px" src="img/<?= $categoria['img']?>" alt="">
           <div class="ContCatgTxt">
-            <p>Anillo</p>
+            <p><?= $categoria['nombre']?></p>
           </div>
-             
+	</a>
         </li>
-        <li>
-          <img src="img/a2.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a3.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a4.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a5.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a5.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a5.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a5.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
-        <li>
-          <img src="img/a5.jpg" alt="">
-          <div class="ContCatgTxt">
-            <p>Anillo</p>
-          </div>
-             
-        </li>
+	<?php endforeach; ?>
       </ul>
     </div>
     <div class="scrollbar">
