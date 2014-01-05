@@ -1,7 +1,8 @@
 <?php
 
 	include '../lib/conexion.php';
-
+	include '../lib/seguridad.php';
+	
 	$descripcion = $_POST['descripcion'];
 	$monto = $_POST['monto'];
 
