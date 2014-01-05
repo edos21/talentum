@@ -1,7 +1,7 @@
 <?php
 
 	include '../lib/conexion.php';
-
+	include '../lib/seguridad.php';
 	try{
 
 		$sql= 'SELECT subcategoria.id, subcategoria.subnombre, categoria.nombre FROM subcategoria INNER JOIN categoria ON categoria.id = subcategoria.idcategoria ORDER BY subcategoria.id DESC';
