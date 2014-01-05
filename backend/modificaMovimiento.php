@@ -1,6 +1,7 @@
 <?php
 error_reporting(0);
 include '../lib/conexion.php';
+include '../lib/seguridad.php';
 
 //buscar el id en funcion de su correo
 try{
