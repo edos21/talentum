@@ -1,6 +1,7 @@
 <?php
 
 	include '../lib/conexion.php';
+	include '../lib/seguridad.php';
 
 	$subnombre = $_POST['subcategoria'];
 	if (isset($_FILES['img']['name'])){
