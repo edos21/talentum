@@ -6,5 +6,5 @@ if ($_SESSION['login'] != true){
 }
 
 if ($_SESSION['admin'] != true){
-	header ('location: ../ingreso.php?sesion');
+	header ('location: ../backend/ingreso.php?sesion');
 }
