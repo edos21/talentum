@@ -3,7 +3,7 @@ error_reporting(0);
 session_start();
 
 include '../lib/conexion.php';
-include '../lib/seguridad.php';
+include '../lib/seguridadcliente.php';
 $compraTotal = 0;
 $pagoTotal = 0;
 //buscar el id en funcion de su correo
