@@ -3,7 +3,7 @@
 session_start();
 
 include '../lib/conexion.php';
-include '../lib/seguridad.php';
+include '../lib/seguridadcliente.php';
 
 try{
 	$sql = 'SELECT * FROM clientes WHERE correo = :correo';
