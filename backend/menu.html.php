@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../lib/seguridad.php';
 include '../includes/header.html';
 
