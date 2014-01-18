@@ -1,6 +1,7 @@
 <?php
 
   include 'lib/conexion.php';
+  error_reporting (0);
 
   try{
 
@@ -248,6 +249,7 @@
           <input type="hidden" name="foto" value="<?php echo $item['foto2'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
           <input type="submit" value="Comprar">
+          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
         </form>
         <?php } elseif(isset($_GET['foto3'])) { ?>
         <form action="cliente/comprarArticulo.html.php" method="post">
@@ -264,6 +266,7 @@
           <input type="hidden" name="foto" value="<?php echo $item['foto3'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
           <input type="submit" value="Comprar">
+          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
         </form>
         <?php } elseif(isset($_GET['foto4'])) { ?>
         <form action="cliente/comprarArticulo.html.php" method="post">
@@ -280,6 +283,7 @@
           <input type="hidden" name="foto" value="<?php echo $item['foto4'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
           <input type="submit" value="Comprar">
+          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
         </form>
         <?php } else { ?>
         <form action="cliente/comprarArticulo.html.php" method="post">
@@ -296,6 +300,7 @@
           <input type="hidden" name="foto" value="<?php echo $item['foto1'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
           <input type="submit" value="Comprar">
+          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
         </form>
         <?php } ?>
         </div>
@@ -304,7 +309,8 @@
       <div class="grid_8 omega ContSubcategoriaMed">
         <?php
           if (count($articulos) > 0){
-            foreach($articulos as $articulo): ?>
+            
+            foreach($articulos as $articulo):  ?>
               <a href="tipo.html.php?subcategoria=<?php echo $articulo['subCategoria'] ?>&id=<?php echo $articulo['id'] ?>"><div class="grid_2 alpha"><img style="width:140px; height:140px" src="img/productos/<?php echo $articulo['foto1'] ?>" alt=""></div></a>
         <?php endforeach;
           }else{?>

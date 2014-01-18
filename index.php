@@ -163,10 +163,10 @@
       <ul style="-webkit-transform: translateZ(0px) translateX(-228px); width: 6840px;">
 	<?php foreach($categorias as $categoria): ?>        
 	<li>
-	<a href="subcategoria.html.php?categoria=<?= $categoria['id']?>">
-          <img style="width:120px" src="img/<?= $categoria['img']?>" alt="">
+	<a href="subcategoria.html.php?categoria=<?php echo $categoria['id']?>">
+          <img style="width:120px" src="img/<?php echo $categoria['img']?>" alt="">
           <div class="ContCatgTxt">
-            <p><?= $categoria['nombre']?></p>
+            <p><?php echo $categoria['nombre']?></p>
           </div>
 	</a>
         </li>

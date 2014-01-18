@@ -1,5 +1,6 @@
 <form action="ingresar.php" method="post">
 <?php
+		session_start()
 	if (isset($_GET['error'])) {
 ?>
 	<h2>Su usuario y Contrase&ntilde;a no coinciden, por favor, verifique</h2>
