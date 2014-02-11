@@ -186,10 +186,10 @@
           Sitemap
         </p>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Portafolio</a></li>
+          <li><a href="./">Inicio</a></li>
+          <li><a href="categorias.html.php">Productos</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="backend/menu.html.php">Admin</a></li>
+          <li><a href="backend/ingreso.phpp">Admin</a></li>
         </ul>
       </div>
       <div class="grid_3 txtfooter">
