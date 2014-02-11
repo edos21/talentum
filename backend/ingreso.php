@@ -2,7 +2,6 @@
   session_start();
   error_reporting(0);
   include 'lib/conexion.php';
-	include '../lib/seguridadcliente.php';
 ?>
 <!doctype html>
 <html lang="es">
