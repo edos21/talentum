@@ -87,7 +87,7 @@ while ($row = $s->fetch()) {
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/960_12_col.css">
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../css/horizontal.css">
 <!--  Load jQuery -->
 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
@@ -103,6 +103,7 @@ while ($row = $s->fetch()) {
 <script type="text/javascript" src="../js/Modal.js"></script>  
   
 </head>
+
 
 <body>
 

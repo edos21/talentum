@@ -1,5 +1,4 @@
 <?php
-	session_start()
 session_start();
 
 include '../lib/conexion.php';
@@ -29,5 +28,5 @@ else {
 	}else{
 		header('Location: ' . $_SERVER['HTTP_REFERER']."?error");
 }
-			
+
 		}

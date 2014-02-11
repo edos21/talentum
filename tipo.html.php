@@ -1,5 +1,5 @@
 <?php
-
+session_start();
   include 'lib/conexion.php';
   error_reporting (0);
 
@@ -105,7 +105,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/960_12_col.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-    <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/horizontal.css">
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script src="js/jquery.cycle2.min.js" type="text/javascript"></script>
@@ -199,114 +200,161 @@
       <h2 class="TextCategoria">Articulos</h2>
       <?php if (isset($items)){
        foreach($items as $item): ?>
-      <div class="ContSubcategoria grid_4">
+      <div class="grid_4">
+        
         <?php if (isset($_GET['foto2'])) { ?>
-        <img style="width:300px; height:300px" src="img/productos/<?php echo $item['foto2'] ?>" alt="">
+        <img style="width:300px; height:300px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['foto2'] ?>" alt="">
         <?php } elseif(isset($_GET['foto3'])) { ?>
-        <img style="width:300px; height:300px" src="img/productos/<?php echo $item['foto3'] ?>" alt="">
+        <img style="width:300px; height:300px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['foto3'] ?>" alt="">
         <?php } elseif(isset($_GET['foto4'])) { ?>
-        <img style="width:300px; height:300px" src="img/productos/<?php echo $item['foto4'] ?>" alt="">
+        <img style="width:300px; height:300px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['foto4'] ?>" alt="">
         <?php } else { ?>
-        <img style="width:300px; height:300px" src="img/productos/<?php echo $item['foto1'] ?>" alt="">
+        <img style="width:300px; height:300px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['foto1'] ?>" alt="">
         <?php } ?>
+        <center></center>
         <div class="ContSubcategoriaMini">
-          <div class="grid_1 omega">
+          <div class="grid_1">
             <a href="tipo.html.php?subcategoria=<?php echo $item['subCategoria'] ?>&id=<?php echo $item['id']?>&foto1">
-              <img style="width:61px; height:61px" src="img/productos/<?php echo $item['joya1'] ?>" alt="">
+              <img style="width:61px; height:61px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['joya1'] ?>" alt="">
             </a>
           </div>
           <?php if ($item['joya2'] != ""){ ?>
-          <div class="grid_1 omega">
+          <div class="grid_1">
             <a href="tipo.html.php?subcategoria=<?php echo $item['subCategoria'] ?>&id=<?php echo $item['id']?>&foto2">
-              <img style="width:61px; height:61px" src="img/productos/<?php echo $item['joya2'] ?>" alt="">
+              <img style="width:61px; height:61px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['joya2'] ?>" alt="">
             </a>
           </div>
           <?php } if ($item['joya3'] != ""){ ?>
-          <div class="grid_1 omega">
+          <div class="grid_1">
             <a href="tipo.html.php?subcategoria=<?php echo $item['subCategoria'] ?>&id=<?php echo $item['id']?>&foto3">
-              <img style="width:61px; height:61px" src="img/productos/<?php echo $item['joya3'] ?>" alt="">
+              <img style="width:61px; height:61px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['joya3'] ?>" alt="">
             </a>
           </div>
           <?php } if ($item['joya4'] != ""){ ?>
-          <div class="grid_1 omega">
+          <div class="grid_1">
             <a href="tipo.html.php?subcategoria=<?php echo $item['subCategoria'] ?>&id=<?php echo $item['id']?>&foto4">
-              <img style="width:61px; height:61px" src="img/productos/<?php echo $item['joya4'] ?>" alt="">
+              <img style="width:61px; height:61px;box-shadow: 0 0 5px black;" src="img/productos/<?php echo $item['joya4'] ?>" alt="">
             </a>
           </div>
          <?php } 
           if (isset($_GET['foto2'])) { ?>
+      <div class="grid_4 omega alpha" style="padding:10px 0;">
         <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
+          <input type="text" name="talla" id="talla"> 
+          <br>
           <label for="oro">Oro:</label>
           <select name="oro" id="oro">
             <option value="">Seleccione...</option>
             <option>18Kilates</option>
             <option>10Kilates</option>
           </select>
+          <br>
+          
           <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
+          <textarea name="observaciones" id="observaciones" placeholder="Indicar si el anillo llevará algun grabado personalizado." cols="40" rows="3">
+          	
+          </textarea>
+
           <input type="hidden" name="foto" value="<?php echo $item['foto2'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
+ 
+					<br>
+          <center>
+						<input type="submit" value="Comprar" class="BtnComprar">
+						<a class="BtnVolver"  href="categorias.html.php">Volver</a>
+          </center>
         </form>
+      </div>            
         <?php } elseif(isset($_GET['foto3'])) { ?>
+      <div class="grid_4 omega alpha" style="padding:10px 0;"> 
         <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
+          <input type="text" name="talla" id="talla"> 
+          <br>
           <label for="oro">Oro:</label>
           <select name="oro" id="oro">
             <option value="">Seleccione...</option>
             <option>18Kilates</option>
             <option>10Kilates</option>
           </select>
+          <br>
+          
           <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
+          <textarea name="observaciones" id="observaciones" placeholder="Indicar si el anillo llevará algun grabado personalizado." cols="40" rows="3">
+          	
+          </textarea>
           <input type="hidden" name="foto" value="<?php echo $item['foto3'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
+          <center>
+						<input type="submit" value="Comprar" class="BtnComprar">
+						<a class="BtnVolver"  href="categorias.html.php">Volver</a>
+          </center>
         </form>
+      </div> 
         <?php } elseif(isset($_GET['foto4'])) { ?>
+        
+      <div class="grid_4 omega alpha" style="padding:10px 0;">
         <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
+          <input type="text" name="talla" id="talla"> 
+          <br>
           <label for="oro">Oro:</label>
           <select name="oro" id="oro">
             <option value="">Seleccione...</option>
             <option>18Kilates</option>
             <option>10Kilates</option>
           </select>
+          <br>
+          
           <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
+          <textarea name="observaciones" id="observaciones" placeholder="Indicar si el anillo llevará algun grabado personalizado." cols="40" rows="3">
+          	
+          </textarea>
+          
           <input type="hidden" name="foto" value="<?php echo $item['foto4'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
+          <br>
+
+          <center>
+						<input type="submit" value="Comprar" class="BtnComprar">
+						<a class="BtnVolver"  href="categorias.html.php">Volver</a>
+          </center>
         </form>
+      </div> 
         <?php } else { ?>
+      <div class="grid_4 omega alpha" style="padding:10px 0;">
         <form action="cliente/comprarArticulo.html.php" method="post">
           <label for="talla">Talla:</label>
-          <input type="text" name="talla" id="talla">
+          <input type="text" name="talla" id="talla"> 
+          <br>
           <label for="oro">Oro:</label>
           <select name="oro" id="oro">
             <option value="">Seleccione...</option>
             <option>18Kilates</option>
             <option>10Kilates</option>
           </select>
+          <br>
+          
           <label for="observaciones">Observaciones:</label>
-          <textarea name="observaciones" id="observaciones" placeholder="indicar si el anillo llevara algun grabado"></textarea>
+          <textarea name="observaciones" id="observaciones" placeholder="Indicar si el anillo llevará algun grabado personalizado." cols="40" rows="3">
+          	
+          </textarea>
           <input type="hidden" name="foto" value="<?php echo $item['foto1'] ?>" >
           <input type="hidden" name="iditem" value="<?php echo $item['id'] ?>" >
-          <input type="submit" value="Comprar">
-          <a class="BtnVolver"  href="categorias.html.php">Volver al menu</a>
+          <br>
+
+          <center>
+						<input type="submit" value="Comprar" class="BtnComprar">
+						<a class="BtnVolver"  href="categorias.html.php">Volver</a>
+          </center>
         </form>
+      </div> 
         <?php } ?>
         </div>
       </div>
       <?php endforeach; } ?>
-      <div class="grid_8 omega ContSubcategoriaMed">
+      <div class="grid_8 omega">
         <?php
           if (count($articulos) > 0){
             
@@ -315,8 +363,11 @@
         <?php endforeach;
           }else{?>
         <center>
-          <h2>No se encontraron Articulos</h2>
-          <a href="categorias.html.php">Volver a Categorias</a>
+          <div class="ContSubcategoriaMed omega alpha grid_12">
+						<h2 style="padding:10px;">No se encontraron Articulos</h2>
+						<a href="categorias.html.php" class="BtnVolver">Volver al menú</a>
+						<br>
+          </div>
         </center>
       <?php } ?>
       </div>

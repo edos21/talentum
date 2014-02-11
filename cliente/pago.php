@@ -17,7 +17,7 @@ include '../lib/seguridadcliente.php';
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/960_12_col.css">
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../css/horizontal.css">
 <!--  Load jQuery -->
 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
@@ -113,39 +113,48 @@ include '../lib/seguridadcliente.php';
     </div>
   </header>
     <body>
-     <div class="container_12 contenedorprincipal">
-     <div style="padding:20px;">
-	<h2>Registrar Pagos</h2>
-	<form action="pagar.php" method="post">
-	<?php
-		if (isset($_GET['error'])) {
-	?>
+			<div class="container_12 contenedorprincipal">
+				<div style="padding:20px;">
+					<h2 class="TextCategoria">Registrar Pagos</h2>
+					<form action="pagar.php" method="post">
+						<?php if (isset($_GET[ 'error'])) { ?>
 
-		<h2>Error, Favor verifique haber llenado todos los campos obligatorios</h2>
-		<input type="hidden" name="error">
+						<h2>Error, Favor verifique haber llenado todos los campos obligatorios</h2>
+						<input type="hidden" name="error">
 
-	<?php
-		}
-	?>
+						<?php } ?>
+						<div class="grid_3">
+							<img src="../img/shop.png" alt="">
+						</div>
+						<div class="grid_5">
+							<label for="tipo">Forma de Pago*</label>
+							<br>
+							<select name="tipo" id="tipo">
+								<option value="">Seleccione...</option>
+								<option>Deposito</option>
+								<option>Transferencia</option>
+							</select>
+							<br>
+							<label for="ndocumento">Nro de Documento*</label>
+							<br>
+							<input type="text" name="ndocumento" id="ndocumento">
+							<br>
+							<label for="monto">Monto*</label>
+							<br>
+							<input type="text" name="monto" id="monto">
+							<br>
+							<label for="observaciones">Observaciones</label>
+							<br>
+							<textarea name="observaciones" id="observaciones" cols="30" rows="10"></textarea>
+							<br>
+							<input type="submit" value="Pagar" class="BtnPagar">
+							<a href="../" class="BtnVolver">Volver</a>
+						</div>
+					</form>
 
-		<label for="tipo">Forma de Pago*</label>
-		<select name="tipo" id="tipo">
-			<option value="">Seleccione...</option>
-			<option>Deposito</option>
-			<option>Transferencia</option>
-		</select>
-		<label for="ndocumento">Nro de Documento*</label>
-		<input type="text" name="ndocumento" id="ndocumento">
-		<label for="monto">Monto*</label>
-		<input type="text" name="monto" id="monto">
-		<label for="observaciones">Observaciones</label>
-		<textarea name="observaciones" id="observaciones" cols="30" rows="10"></textarea>
-		<input type="submit" value="Pagar">
-	</form>
-	
 
-     </div>
-     </div>
+				</div>
+			</div>
   <footer>
     <div class="container_12 contfooter colordegradado2">
       <img src="../img/anillos.png" alt="" class="anillofooter">

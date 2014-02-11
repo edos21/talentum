@@ -36,7 +36,8 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/960_12_col.css">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/horizontal.css">
 <!--  Load jQuery -->
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -132,6 +133,9 @@
 
   
   <div class="container_12 contenedorprincipal">
+      <div class="Banner">
+    	<img src="img/banner/banner.jpg" alt="">
+    </div>
   <h2 class="TextCategoria"><?php echo $subcategorias[0]['nombre'] ?></h2>
     <?php
     if (count($subcategorias) > 0){
@@ -148,11 +152,14 @@
       </div>
       <?php endforeach; 
       }else{?>
-      <center>
-        <h2>No se encontraron SubCategorias</h2>
-        <a href="categorias.html.php">Volver a Categorias</a>
-      </center>
-      
+<div style="width:100%;height:100px;">
+	<center>
+		<h2>No se encontraron SubCategorias</h2>
+		<br>
+		<a href="categorias.html.php" class="BtnVolver">Volver a Categorias</a>
+	</center>
+
+</div>
       <?php } ?>
   </div>
   <footer>

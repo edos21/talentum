@@ -43,7 +43,7 @@ while($row = $s->fetch()){
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/960_12_col.css">
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../css/horizontal.css">
 <!--  Load jQuery -->
 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
@@ -139,53 +139,61 @@ while($row = $s->fetch()){
     </div>
   </header>
     <body>
-     <div class="container_12 contenedorprincipal">
-          <div style="padding:20px;">
-<form action="modifica.php" method="POST">
-	<?php
-		if (isset($_GET['error'])) {
-	?>
-
-		<h2>Error, Favor verifique que todos los datos estan correctamente llenados o que no se encuentra registrado</h2>
-		<input type="hidden" name="error">
-
-	<?php
-		}
-		if (isset($_GET['guardado'])) {
-		?>
-
-		<h2>Datos Modificados Correctamente</h2>
-		<input type="hidden" name="guardado">
-		<?php
-		}
-		
-		foreach($clientes as $cliente): ?>  
-		
-        <label for="nombre">Razon Social/Nombre*</label><br>
-        <input type="text" name="nombre" id="nombre" value="<?php echo $cliente['nombre'] ?>"><br>
-          
-        <label for="rif">Rif/Cedula</label><br>
-        <input type="text" name="rif" id="rif" value="<?php echo $cliente['rif'] ?>"><br>
-          
-        <label for="direccion">Direcci&oacute;n</label><br>
-        <textarea cols="50" rows="5" name="direccion" id="direccion"><?php echo $cliente['direccion'] ?></textarea><br>
-          
-        <label for="telefono">Telefono</label><br>
-        <input type="text" name="telefono" id="telefono" value="<?php echo $cliente['telefono'] ?>"><br>
-          
-        <label for="celular">Celular</label><br>
-        <input type="text" name="celular" id="celular" value="<?php echo $cliente['celular'] ?>"><br>
-        <input type="hidden" value="<?php echo $cliente['id'] ?>" name="id">
-        <input type="submit" value="Modificar">
-        <a href="../">Cancelar</a>
-    	<?php endforeach ?>
-    		</div>
+<div class="container_12 contenedorprincipal">
+	<h2 class="TextCategoria">Modificar perfil</h2>
+	<div class="grid_2">
+		<img src="../img/profile.gif" alt="">
 	</div>
+	<div class="grid_8" >
+		<form action="modifica.php" method="POST">
+			<?php if (isset($_GET[ 'error'])) { ?>
 
-</form>
+			<h2>Error, Favor verifique que todos los datos estan correctamente llenados o que no se encuentra registrado</h2>
+			<input type="hidden" name="error">
+
+			<?php } if (isset($_GET[ 'guardado'])) { ?>
+
+			<h2>Datos Modificados Correctamente</h2>
+			<input type="hidden" name="guardado">
+			<?php } foreach($clientes as $cliente): ?>
+
+			<label for="nombre">Razon Social/Nombre*</label>
+			<br>
+			<input type="text" name="nombre" id="nombre" value="<?php echo $cliente['nombre'] ?>">
+			<br>
+
+			<label for="rif">Rif/Cedula</label>
+			<br>
+			<input type="text" name="rif" id="rif" value="<?php echo $cliente['rif'] ?>">
+			<br>
+
+			<label for="direccion">Direcci&oacute;n</label>
+			<br>
+			<textarea cols="50" rows="5" name="direccion" id="direccion">
+				<?php echo $cliente[ 'direccion'] ?>
+			</textarea>
+			<br>
+
+			<label for="telefono">Telefono</label>
+			<br>
+			<input type="text" name="telefono" id="telefono" value="<?php echo $cliente['telefono'] ?>">
+			<br>
+
+			<label for="celular">Celular</label>
+			<br>
+			<input type="text" name="celular" id="celular" value="<?php echo $cliente['celular'] ?>">
+			<br>
+			<input type="hidden" value="<?php echo $cliente['id'] ?>" name="id">
+			<input type="submit" value="Modificar" class="BtnGuardar">
+			<a href="../" class="BtnVolver">Cancelar</a>
+			<?php endforeach ?>
+		</form>
+	</div>
+</div>
 
 
-     </div>
+
+</div>
   <footer>
     <div class="container_12 contfooter colordegradado2">
       <img src="../img/anillos.png" alt="" class="anillofooter">
