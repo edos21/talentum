@@ -402,7 +402,9 @@
       </div>
 
       <div class="clearfix"></div>
-      <input style="float:right;" class="FloatRight BtnVerde" type="submit" value="Registrar">
+      <center>
+      	<input class="BtnReg" type="submit" value="Registrar">
+      </center>
 
     </form>
   </div>
@@ -412,7 +414,7 @@
         <img src="img/business_user_add.png" alt="" style="padding: 0 10px;" >
         <span class="TextCategoria">Inicio de Sesión</span>
       </div>
-          <a href="#" class="FloatRight close">
+          <a href="#" class="close">
             <img src="img/exit.png" alt="">
           </a>
       <form action="ingresar.php" method="post">
@@ -435,12 +437,13 @@
           <input type="mail" name="correo" id="correo"><br>
           <label style="padding:0 0 0 20px;" for="clave">Contrase&ntilde;a</label>
           <input type="password" name="clave" id="clave"><br>
-          <input style="float:right;" type="submit" value="Ingresar">
-      </form><br>
-      <a style="padding:0 0 0 20px;" href="#dialog" name="modal">Registrarse</a>
+          <center>
+						<input class="BtnLogin"  type="submit" value="Ingresar">
+						<a class="BtnReg" href="#dialog" name="modal">Registrarse</a>
+          </center>
+      </form>
       </div>
-
-</div>
+	</div>
   <div id="empresa" class="window">
     <center>
       <img style="padding:10px;" src="img/logo.png" alt="">

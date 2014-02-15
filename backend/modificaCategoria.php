@@ -1,5 +1,5 @@
 <?php
-	session_start()	
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 	
@@ -45,10 +45,13 @@
 					<label for="img">Imagen</label>
 					<input type="file" name="img" id="img" accept="image/*">
 					<input type="hidden" name="id" value="<?php echo $categoria['id'];?>">
-                <div class="Botonera" style="margin:30px 0 10px 0;">
-                  <input type="submit" value="Guardar">
-                </div>
+					
+           <br>
+           <br>
+                  <input  class="BtnGuardar" type="submit" value="Guardar">
+   
 				</form>
+				<div class="clearfix"></div>
 			<?php endforeach; ?>
 
 <?php

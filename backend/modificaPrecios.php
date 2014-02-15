@@ -1,5 +1,5 @@
 <?php
-	session_start()	
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 	
@@ -36,8 +36,12 @@
 		<center>
 			<h2>Modificar Precios</h2>
 			<br>
+
 			<a class="BtnVolver" href="modificarPrecios.php">Volver</a>
 			<br>
+			<br>
+
+
 			<?php foreach($precios as $precio): ?>
 				<form method="post" action="actualizaPrecio.php">
 					<label for="descripcion">Descripcion</label>
@@ -45,10 +49,12 @@
 					<label for="monto">Monto</label>
 					<input type="text" name="monto" id="monto" value="<?php echo $precio['monto'] ?>">
 					<input type="hidden" name="id" value="<?php echo $precio['id'];?>">
-					<input type="submit" value="Guardar">
+					
+					<input class="BtnGuardar" type="submit" value="Guardar">
 				</form>
 			<?php endforeach; ?>
 		</center>
+		<div class="clearfix"></div>
 		<br>
 		<br>
 <?php

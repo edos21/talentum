@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 
@@ -90,10 +90,10 @@
     <div class="clearfix"></div>
     <hr>
     <div class="Botonera" >
-      <input type="submit" value="Guardar">
+      <input  class="BtnGuardar" type="submit" value="Guardar">
     </div>
   </form>
-
+	<div class="clearfix"></div>
 <?php
 
 	include ('../includes/footer.html');

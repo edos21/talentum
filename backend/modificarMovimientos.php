@@ -1,5 +1,5 @@
 <?php 
-	session_start()
+	session_start();
 error_reporting(0);
 include '../lib/conexion.php';
 include '../lib/seguridad.php';

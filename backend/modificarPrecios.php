@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 
@@ -36,6 +36,7 @@
 			<h2>Modificar / Eliminar Precios</h2>
 <br>
                   <a class="BtnVolver" href="menu.html.php">Volver</a>
+<br>
 <br>
 			<table class="TablaEstilo" border="0">
 				<thead>

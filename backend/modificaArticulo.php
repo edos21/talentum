@@ -1,5 +1,5 @@
 <?php
-	session_start()	
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 	
@@ -104,9 +104,13 @@
 					<input type="text" id="peso" name="peso" value="<?php echo $articulo['peso'] ?>">
 					<input type="hidden" name="id" value="<?php echo $articulo['id'] ?>">
 					
-					<div class="Botonera" >
-						<input type="submit" value="Guardar">
-					</div>
+						<br>
+						<br>
+
+							
+						<input class="BtnGuardar" type="submit" value="Guardar">
+
+	
 				</form>
 			<?php endforeach; ?>
 

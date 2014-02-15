@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 	include '../lib/seguridad.php';
 	include ('../includes/header.html');
 
@@ -17,10 +17,13 @@
 				<label for="img">Imagen</label>
 				<input type="file" name="img" id="img" accept="image/*"><br>
                 <div class="Botonera" >
-                  <input type="submit" value="Guardar">
+                  <input class="BtnGuardar" type="submit" value="Guardar">
                 </div>
 			</form>
+			
+			
 			</div>
+			<div class="clearfix"></div>
 		
 
 <?php

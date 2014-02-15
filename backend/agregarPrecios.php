@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 	include '../lib/seguridad.php';
 	include ('../includes/header.html');
 
@@ -14,11 +14,12 @@
 				<input type="text" name="descripcion" id="descripcion">
 				<label for="monto">Monto</label>
 				<input type="text" name="monto" id="monto">
-                <div class="Botonera" style="margin:40px 0 10px 0 " >
-                  <input type="submit" value="Guardar">
-                </div>
+         <br>      
+         <br>      
+        <input class="BtnGuardar" type="submit" value="Guardar">
+             
 			</form>
-
+	<div class="clearfix"></div>
 <?php
 
 	include ('../includes/footer.html');

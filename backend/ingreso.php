@@ -118,7 +118,9 @@
 					if (isset($_GET[ 'error'])) { 
 
 			?>
-					<h2>Su usuario y Contrase&ntilde;a no coinciden, por favor, verifique</h2>
+					<center>
+						<h2>Su usuario y Contrase&ntilde;a no coinciden, por favor, verifique</h2>
+					</center>
 					<input type="hidden" name="error">
 			<?php 
 
@@ -224,7 +226,7 @@
     </a>
 
       <?php if (isset($_GET[ 'error'])) { ?>
-      <h4>Error, Favor verifique que todos los datos estan correctamente llenados o que ya no se encuentra registrado</h4>
+            <h4>Error, Favor verifique que todos los datos estan correctamente llenados o que ya no se encuentra registrado</h4>
       <input type="hidden" name="error">
       <?php } ?>
 
@@ -300,14 +302,16 @@
         <img src="../img/business_user_add.png" alt="" style="padding: 0 10px;" >
         <span class="TextCategoria">Inicio de Sesión</span>
       </div>
-          <a href="#" class="FloatRight close">
+          <a href="#" class="close">
             <img src="../img/exit.png" alt="">
           </a>
       <form action="ingresar.php" method="post">
       <?php
           if (isset($_GET['error'])) {
       ?>
-          <h2>Su correo y Contrase&ntilde;a no coinciden, por favor, verifique</h2>
+          <center>
+          	<h2>Su correo y Contrase&ntilde;a no coinciden, por favor, verifique</h2>
+          </center>
           <input type="hidden" name="error">
       <?php
           }

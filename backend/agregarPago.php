@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 include '../lib/conexion.php';
 include '../lib/seguridad.php';
   
@@ -26,16 +26,20 @@ include '../lib/seguridad.php';
 
 include '../includes/header.html';
 ?>
-<div class="grid_4">
+<div class="grid_6">
+  <h2>Agregar pago a cliente</h2>
+  <br>
   <form action="guardarPago.php" method="post">
     <label>Correo del cliente</label>
+    <br>
     <input type="text" name="correo" id="correo" list="correos" autocomplete="off">
+    <br>
+    <label for="tipo">Forma de Pago*</label>
     <datalist id="correos">
      <?php foreach($clientes as $cliente): ?>
       <option value="<?= $cliente['correo'] ?>">
       <?php endforeach; ?>
     </datalist>
-    <label for="tipo">Forma de Pago*</label>
     <select name="tipo" id="tipo">
       <option value="">Seleccione...</option>
       <option>Efectivo</option>
@@ -57,7 +61,8 @@ include '../includes/header.html';
       <option>Espera</option>
       <option>Aprobado</option>
     </select>
-    <input type="submit" value="Pagar">
+    <input class="BtnPagar" type="submit" value="Pagar">
   </form>
 </div>
+<div class="clearfix"></div>
 <?php include '../includes/footer.html'; ?>

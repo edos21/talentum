@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 	try{
@@ -37,12 +37,13 @@
           <a class="BtnVolver" href="menu.html.php">Volver</a>
         </div>
         <center>
-			<table  border="0" cellpadding="10">
+			<table width="400px"  border="0" cellpadding="10">
 				<thead>
 					<tr>
-						<th><b>SubCategoria</b></th>
-						<th><b>Categoria</b></th>
-						<th><b>Opciones</b></th>
+						<th width="100"><b>SubCategoria</b></th>
+						<th width="100"><b>Categoria</b></th>
+						<th width="100"><b>Opciones</b></th>
+						<th width="100"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -50,7 +51,7 @@
 						<tr>
 							<td><?php echo $subcategoria['subnombre']; ?></td>
 							<td><?php echo $subcategoria['nombre']; ?></td>
-							<td>
+							<td colspan="2">
 								<form action="modificaSubCategoria.php" method="post">
 									<input type="hidden" name="id" value="<?php echo $subcategoria['id'];?>">
 									<input type="submit" value="Modificar">

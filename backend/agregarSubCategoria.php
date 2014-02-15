@@ -1,5 +1,5 @@
 <?php
-	session_start()
+	session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
 
@@ -41,11 +41,11 @@
 					<option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nombre'] ?></option>
 					<?php endforeach; ?>
 				</select> <br> <br>
-				<div class="Botonera" >
-           <input type="submit" value="Guardar">
-        </div>
-			</form>
+		
+           <input  class="BtnGuardar" type="submit" value="Guardar">
 
+			</form>
+		<div class="clearfix"></div>
 <?php
 
 	include ('../includes/footer.html');
