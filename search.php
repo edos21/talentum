@@ -24,7 +24,7 @@
 
 <h1>Busqueda de articulos</h1>
 
-<?php if(isset($_GET['q'])) {
+<?php if(isset($articulos)) {
     foreach($articulos as $articulo): ?>
     <img src="img/productos/<?php echo $articulo['foto1'] ?>">
     <a href="tipo.html.php?subcategoria=<?php echo $articulo['subCategoria'] ?>&id=<?php echo $articulo['id'] ?>"><?php echo $articulo['articulo'] ?></a>
