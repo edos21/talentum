@@ -24,10 +24,17 @@
 
 <h1>Busqueda de articulos</h1>
 
-<?php foreach($articulos as $articulo): ?>
+<?php if(isset($_GET['q'])) {
+    foreach($articulos as $articulo): ?>
     <img src="img/productos/<?php echo $articulo['foto1'] ?>">
     <a href="tipo.html.php?subcategoria=<?php echo $articulo['subCategoria'] ?>&id=<?php echo $articulo['id'] ?>"><?php echo $articulo['articulo'] ?></a>
     <p><?php echo $articulo['descripcion'] ?></p>
     <br>
 
-<?php endforeach; ?>
+<?php endforeach; } else{?>
+
+No se encontraron resultados
+
+<a href="javascript:history.back()">Volver</a>
+
+<?php } ?>
