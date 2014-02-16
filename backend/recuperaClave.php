@@ -25,7 +25,7 @@
     </div>
 	
 	<div class="grid_11">
-		<form method="post" action="actualizarClave.php">
+		<form method="post" action="actualizaClave.php">
 		    <label for="correo">correo del cliente</label>
 			<input type="mail" name="correo" id="correo" list="clientes" autocomplete="off"><br>
 			<datalist id="clientes">
