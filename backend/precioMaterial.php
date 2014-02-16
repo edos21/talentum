@@ -23,6 +23,7 @@
 ?>
 
     <h2>Cambiar Precio de Materiales</h2>
+    <p>Usar el punto (.) como separador decimal</p>
     <div class="push_10">
         <a class="BtnVolver" href="menu.html.php">Volver</a>
     </div>
