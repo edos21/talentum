@@ -11,9 +11,9 @@
 	
 	<div class="grid_11">
 		<form method="post" action="claveCambiada.php">
-			<label for="clave">clave nueva</label>
+			<label for="clave">Nueva clave:</label>
 			<input type="password" name="clave" id="clave"><br>
-            <label for="claveDos">repetir clave</label>
+            <label for="claveDos">Repertir clave</label>
 			<input type="password" name="claveDos" id="claveDos"><br>
             <div class="Botonera" >
                 <input class="BtnGuardar" type="submit" value="Guardar">
