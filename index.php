@@ -131,7 +131,10 @@
   <div class="slider">
     <div class="sliderBarra">
       <p>
-        <img src="img/Search.png" alt=""><input type="search">
+        <img src="img/Search.png" alt="">
+        <form action="search.php" method="get">
+            <input type="text" name="q">
+        </form>
       </p>
     </div>
     <div class="TituloSlider">
