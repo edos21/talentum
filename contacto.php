@@ -112,62 +112,81 @@
     </div>
   </header>
   
-  <div class="container_12 contenedorprincipal ContContact">
-    
-    <h2 class="TextCategoria">Contacto</h2>
-    
-    <div class="grid_3 Contacto">
-      <ul>
-        <li>
-      
-        <li><img src="img/phone32.png" alt="">
-        <b>Teléfono:</b> +58 416-6572119</li>
-        <li><img src="img/mailopened32.png" alt="">
-        <b>Email</b> xxxxxxxxxxxx@gmail.com</li>
-        <li></li>
-                <div class="CodeQR"><img src="img/qrcod.png" alt=""></div>
-      </ul>
-    </div>
-    <div class="grid_4">
-      
-    <form class="contact_form" action="#" method="post">
-    <ul>
-       <li>
-           <label for="name">Nombre y Apellido:</label>
-           <input type="text"  placeholder="Johan Ricardo" required />
-       </li>
-       <li>
-           <label for="telf">Teléfono:</label>
-           <input type="text" name="telf" placeholder="0123 1234567" required />
-       </li>
-       <li>
-           <label for="email">Email:</label>
-           <input type="email" name="email" placeholder="xxxxxxx@ejemplo.com" required />
-       </li>
-       <li>
-           <label for="Mensaje">Mensaje:</label>
-           <textarea name="Mensaje" cols="40" rows="6" required ></textarea>
-       </li>
-        <li>
-          <button class="submit" type="submit">Enviar</button>
-        </li>
-    </ul>
-</form>
+<div class="container_12 contenedorprincipal ContContact">
 
-      
-    </div>
-    <div class="grid_3 Social">
-      <b>
-        <span class="TextCategoria">Redes sociales</span>
-      </b><br>
-      <a href="#"><img src="img/Twitter.png" alt=""></a>
-      <a href="#"><img src="img/Facebook.png" alt=""></a>
-      <a href="#"><img src="img/YouTube.png" alt=""></a>
-    </div>
+	<h2 class="TextCategoria">Contacto</h2>
+<br>
+	<div class="grid_4 Contacto">
+		<center>
+			<h3>Teléfono y email:</h3>
+		</center>
+		<ul>
+			<li>
+
+				<li>
+					<img src="img/phone32.png" alt="">
+					<b>Teléfono:</b>+58 416-6572119</li>
+				<li>
+					<img src="img/mailopened32.png" alt="">
+					<b>Email</b>xxxxxxxxxxxx@gmail.com</li>
+				<li></li>
+
+		</ul>
+	</div>
+	
+	<div class="clearfix"></div>
+<br>
+	<div style="background-color: #d4d4d4;">
+		<div style="width: 550px;padding:20px;" class="Contacto">
+		<h3>Tambíen puedes envíarnos un mensaje llenando este formulario:</h3>
+
+			<form class="contact_form" action="#" method="post">
+				<ul>
+					<li>
+						<label for="name">Nombre y Apellido:</label>
+						<input type="text" placeholder="Johan Ricardo" required />
+					</li>
+					<li>
+						<label for="telf">Teléfono:</label>
+						<input type="text" name="telf" placeholder="0123 1234567" required />
+					</li>
+					<li>
+						<label for="email">Email:</label>
+						<input type="email" name="email" placeholder="xxxxxxx@ejemplo.com" required />
+					</li>
+					<li>
+						<label for="Mensaje">Mensaje:</label>
+						<textarea name="Mensaje" cols="20" rows="4" required></textarea>
+					</li>
+				</ul>
+
+						<button style="margin-left: 155px;margin-top: 0px;border-top-width: 0px;margin-bottom: 0px;" class="submit BtnEnviar" type="submit">Enviar</button>
 
 
+			</form>
+		</div>
+	</div>
 
-  </div>
+
+	<div class="clearfix"></div>
+	<center>
+		<h2 class="TextCategoria">Redes sociales</h2>
+		<div class="Social">
+			<h3>Visitanos en nuestras redes sociales</h3>
+			<br>
+			<a href="#">
+				<img src="img/Twitter.png" alt="">
+			</a>
+			<a href="#">
+				<img src="img/Facebook.png" alt="">
+			</a>
+			<a href="#">
+				<img src="img/YouTube.png" alt="">
+			</a>
+		</div>
+	</center>
+	<div class="clearfix"></div>
+</div>
   <footer>
     <div class="container_12 contfooter colordegradado2">
       <img src="img/anillos.png" alt="" class="anillofooter">
