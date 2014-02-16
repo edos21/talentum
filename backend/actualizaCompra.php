@@ -11,7 +11,7 @@
 		?>
 <?php
 	
-	include ('../includes/header.html');
+	include ('../includes/header.php');
 
 ?>
 		<center>
@@ -57,7 +57,7 @@
 		?>	
 <?php
 	
-	include ('../includes/header.html');
+	include ('../includes/header.php');
 
 ?>
 		<center>

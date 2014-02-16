@@ -1,7 +1,7 @@
 <?php
     session_start();
     include '../lib/seguridad.php';
-    include '../includes/header.html';
+    include '../includes/header.php';
 ?>
 
     <h2>Cambiar Clave</h2>

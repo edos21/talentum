@@ -130,16 +130,15 @@
 
   <div class="slider">
     <div class="sliderBarra">
-      <p>
-        <img src="img/Search.png" alt="">
-        <form action="search.php" method="get">
-            <input type="text" name="q">
+    
+        <form style="float:right;" action="search.php" method="get">
+            <input class="BarraBuscar" type="text" name="q">
         </form>
-      </p>
+     
     </div>
     <div class="TituloSlider">
       <p><span>Talentum Joyas</span><br>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ipsum harum sed sint reprehenderit nemo enim repellendus quas veritatis quia!</p>
+      Empresa dedicada a la diseño y creación de Anillos</p>
     </div>
     <div class="cycle-slideshow" data-cycle-next="#next3" data-cycle-prev="#prev3" data-cycle-tile-vertical=false data-cycle-speed="1000">
       

@@ -144,10 +144,7 @@ header( "refresh:5;url=../categorias.html.php" )
               <img src="../img/oro.png" alt="">
             </div>
             <div class="precioro">
-              <p>Precio del Oro</p>
-              <p>99999,99 $
-                <img src="../img/FlechaArriba.png" alt="">
-              </p>
+		<?php include '../includes/precio.php'?>
             </div>
           </div>
         </div>

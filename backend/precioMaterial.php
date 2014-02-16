@@ -2,7 +2,7 @@
     session_start();
     include '../lib/seguridad.php';
     include '../lib/conexion.php';
-    include '../includes/header.html';
+    include '../includes/header.php';
     
     try{
         $sql = 'SELECT * FROM materiales';

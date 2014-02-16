@@ -51,7 +51,7 @@
 
 <?php
 
-	include ('../includes/header.html');
+	include ('../includes/header.php');
 
 ?>
 		<script type="text/javascript">

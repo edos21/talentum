@@ -24,7 +24,7 @@ include '../lib/seguridad.php';
       'correo' => $row['correo']);
   }
 
-include '../includes/header.html';
+include '../includes/header.php';
 ?>
 <div class="grid_6">
   <h2>Agregar pago a cliente</h2>

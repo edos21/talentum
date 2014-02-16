@@ -2,14 +2,6 @@
 <html lang="en">
   
   <head>
-
-<!--    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/960_12_col.css">
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="../css/menu-css3.css">
-    <link rel="stylesheet" type="text/css" href="../css/styleAdmin.css">
-    <script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>-->
-    
   <meta charset="UTF-8">
   <title>Talentum Joyas | Inicio</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -17,15 +9,9 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/960_12_col.css">
   <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
-<!--<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>-->
+
 <link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,200' rel='stylesheet' type='text/css'>
-<!--  <link rel="stylesheet" href="../css/horizontal.css">-->
-<!--  <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>-->
-<!--  <script src="../js/jquery.cycle2.min.js" type="text/javascript"></script>
-  <script src="../js/jquery.cycle2.carousel.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="../js/vendor.js"></script>
-  <script type="text/javascript" src="../js/sly.min.js"></script>
-  <script type="text/javascript" src="../js/horizontal.js"></script>-->
+
   <link rel="stylesheet" href="../css/menu-css3.css">
   <link rel="stylesheet" href="../css/styleAdmin.css">
     <!--  JS del MODAL WIndows -->
@@ -99,10 +85,7 @@
               <img src="../img/oro.png" alt="">
             </div>
           <div class="precioro">
-            <p>Precio del Oro</p>
-            <p>99999,99 $
-            <img src="../img/FlechaArriba.png" alt="">
-            </p>
+		<?php include 'includes/precio.php'?>
           </div>
           </div>
         </div> 

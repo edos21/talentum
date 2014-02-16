@@ -2,7 +2,7 @@
     session_start();
 	include '../lib/conexion.php';
 	include '../lib/seguridad.php';
-	include '../includes/header.html';
+	include '../includes/header.php';
 	
 	if($_POST['clave'] == $_POST['claveDos'] && $_POST['clave'] != ""){
 	    try{

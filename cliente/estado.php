@@ -173,10 +173,7 @@ while ($row = $s->fetch()) {
               <img src="../img/oro.png" alt="">
             </div>
             <div class="precioro">
-              <p>Precio del Oro</p>
-              <p>99999,99 $
-                <img src="../img/FlechaArriba.png" alt="">
-              </p>
+		<?php include '../includes/precio.php'?>
             </div>
           </div>
         </div>
@@ -186,48 +183,47 @@ while ($row = $s->fetch()) {
     <body>
      <div class="container_12 contenedorprincipal" >
      <div style="padding:20px;">
-<p>Articulos en espera</p>
-<table border="1">
-	<tr>
-		<th>Articulo</th>
-		<th>Talla</th>
-		<th>Oro</th>
-		<th>Observacion</th>
-	</tr>
-	<?php foreach ($compras as $compra): 
-			if ($compra['estado'] == 'Espera'){	?>
-	<tr>
-		<td><img style="width:70px" src="../img/productos/<?= $compra['foto'] ?>"></td>
-		<td><?= $compra['talla'] ?></td>
-		<td><?= $compra['oro'] ?></td>
-		<td><?= $compra['observacion'] ?></td>
-	</tr>
-	<?php }
-	endforeach ?>
-</table>
-
-<p>Pagos en espera</p>
-<table border="1">
-	<tr>
-		<th>Tipo</th>
-		<th>Nro Documento</th>
-		<th>Monto</th>
-		<th>Observacion</th>
-	</tr>
-	<?php foreach ($pagos as $pago):
-			if ($pago['estado'] == 'Espera'){	?>
-	<tr>
-		<td><?= $pago['tipo'] ?></td>
-		<td><?= $pago['ndocumento'] ?></td>
-		<td><?= $pago['monto'] ?></td>
-		<td><?= $pago['observacion'] ?></td>
-	</tr>
-	<?php }
-	 endforeach ?>
-</table>
-
-<p>Articulos Aprobados y Comprados</p>
-<table border="1">
+				<h3>Articulos en espera</h3>
+				<table style="margin: 50px auto;" width="500px" border="0">
+					<tr>
+						<th>Articulo</th>
+						<th>Talla</th>
+						<th>Oro</th>
+						<th>Observacion</th>
+					</tr>
+					<?php foreach ($compras as $compra): 
+							if ($compra['estado'] == 'Espera'){	?>
+					<tr>
+						<td><img style="width:70px" src="../img/productos/<?= $compra['foto'] ?>"></td>
+						<td><?= $compra['talla'] ?></td>
+						<td><?= $compra['oro'] ?></td>
+						<td><?= $compra['observacion'] ?></td>
+					</tr>
+					<?php }
+					endforeach ?>
+				</table>
+				<h3>Pagos en espera</h3>
+				<table style="margin: 50px auto;" width="500px" border="0">
+					<tr>
+						<th>Tipo</th>
+						<th>Nro Documento</th>
+						<th>Monto</th>
+						<th>Observacion</th>
+					</tr>
+					<?php foreach ($pagos as $pago):
+							if ($pago['estado'] == 'Espera'){	?>
+					<tr>
+						<td><?= $pago['tipo'] ?></td>
+						<td><?= $pago['ndocumento'] ?></td>
+						<td><?= $pago['monto'] ?></td>
+						<td><?= $pago['observacion'] ?></td>
+					</tr>
+					<?php }
+					 endforeach ?>
+				</table>
+				
+<h3>Articulos Aprobados y Comprados</h3>
+<table style="margin: 50px auto;" width="500px" border="0">
 	<tr>
 		<th>Articulo</th>
 		<th>Talla</th>
@@ -248,10 +244,12 @@ while ($row = $s->fetch()) {
 	<?php }
 	endforeach ?>
 </table>
-<p>Total de compras <b><?= $compraTotal ?></b></p>
-
-<p>Pagos Aprobados</p>
-<table border="1">
+<div style="margin: 50px 0;" class="grid_4 push_5">
+	<p>Total de compras <b><?= $compraTotal ?></b></p>
+</div>
+<div class="clearfix"></div>
+<h3>Pagos aprobado</h3>
+<table style="margin: 50px auto;" width="500px" border="0">
 	<tr>
 		<th>Tipo</th>
 		<th>Nro Documento</th>
@@ -270,12 +268,17 @@ while ($row = $s->fetch()) {
 	<?php }
 	 endforeach ?>
 </table>
+
+<div style="margin: 50px 0;" class="grid_4 push_5">
+	
 <p>Total de pagos <b><?= $pagoTotal ?></b></p>
 
 <p>Balance de Compras <b><?= $compraTotal - $pagoTotal ?></b></p>
+</div>
 
 
      </div>
+     <div class="clearfix"></div>
      </div>
   <footer>
     <div class="container_12 contfooter colordegradado2">

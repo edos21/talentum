@@ -359,38 +359,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', end
 
 .Contacto  ul  li {
   display:block;
-  margin:10px 0 15px 0px;
+  margin:10px 0 10px 0px;
   line-height:20px;
   font-size:12px;
 }
 
-.Contacto {
-  position:relative;
-  margin-left:60px;
-}
-.Contacto ul:hover .CodeQR {
-  opacity:1;
-  display:block;
-}
-.Contacto ul li img {
-  position:absolute;
-  margin-left:-30px;
-}
 
-.CodeQR {
-  height:220px;
-  width:220px;
-  position:absolute;
-  top: 90px;
-  left:-30px;
-  background-color:#FFF;
-  padding: 5px;
-  border-radius:5px;
-  -webkit-box-shadow: 5px 5px 6px gray;
-  box-shadow: 5px 5px 6px gray;
-  opacity: 0;
-  display:none;
-}
+
+
 
 
 .Social a img {
@@ -405,15 +381,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', end
 
 
 .contact_form ul {
-    width:300px;
+    
     list-style-type:none;
     margin:0px;
     padding:0px;
 	
 }
 .contact_form li{
-    padding:12px;
-    border-bottom:1px solid #eee;
     position:relative;
 }
 .contact_form label {
@@ -425,7 +399,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', end
     font-weight: bold;
     margin-top: 3px;
     padding: 3px;
-    width: 200px;
+    width: 150px;
+		text-align: right;
 }
 .contact_form input {
     height:20px;
@@ -434,7 +409,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', end
 }
 .contact_form textarea {
     padding:8px;
-    width:350px;
+    width:250px;
 }
 .contact_form button {
     margin-left:90px;
@@ -452,7 +427,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', end
 
 .Social {
   display:block;
-  
+  margin-bottom: 30px;
 }
 
 .ContDegradado {
@@ -543,7 +518,7 @@ border-radius: 5px;
 #modalBoxes #empresa{
  width:700px;
  height:650px;
- background:rgba(255, 255, 255, 0.8);
+ background:rgb(255, 255, 255);
  border: 5px solid rgba(5, 7, 13, 0.83);
  border-radius: 5px;
   font-size:12px;
@@ -859,6 +834,40 @@ float:right;
 	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3b679e', endColorstr='#7db9e8', GradientType=0);
 	background-repeat: no-repeat;
 }
+.BtnEnviar {
+	font-weight: bold;
+	cursor: pointer;
+	padding: 5px 10px 7px 40px;
+	margin: 0 15px 20px 0;
+	border: 1px solid #ccc;
+	background: url(../img/send.png),#c9de96;
+	background: url(../img/send.png),-webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfd255), color-stop(50%, #8eb92a), color-stop(51%, #72aa00), color-stop(100%, #9ecb2d));
+	background: url(../img/send.png),-webkit-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	background: url(../img/send.png),-webkit-gradient(linear, left top, left bottom, from(#bfd255), color-stop(50%, #8eb92a), color-stop(51%, #72aa00), to(#9ecb2d));
+	background: url(../img/send.png),-webkit-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	background: url(../img/send.png), -webkit-gradient(linear, left top, left bottom, from(#bfd255), color-stop(50%, #8eb92a), color-stop(51%, #72aa00), to(#9ecb2d));
+	background: url(../img/send.png), -webkit-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	background: url(../img/send.png),linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bfd255', endColorstr='#9ecb2d', GradientType=0);	
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 12px
+}
+.BtnEnviar:hover {
+
+	background: url(../img/send.png),#f8ffe8;
+	background: url(../img/send.png),#e6f0a3;
+	background: url(../img/send.png),-webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6f0a3), color-stop(50%, #d2e638), color-stop(51%, #c3d825), color-stop(100%, #dbf043));
+	background: url(../img/send.png),-webkit-linear-gradient(top, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
+	background: url(../img/send.png),-webkit-gradient(linear, left top, left bottom, from(#e6f0a3), color-stop(50%, #d2e638), color-stop(51%, #c3d825), to(#dbf043));
+	background: url(../img/send.png),-webkit-linear-gradient(top, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
+	background: url(../img/send.png), -webkit-gradient(linear, left top, left bottom, from(#e6f0a3), color-stop(50%, #d2e638), color-stop(51%, #c3d825), to(#dbf043));
+	background: url(../img/send.png), -webkit-linear-gradient(top, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
+	background: url(../img/send.png),linear-gradient(to bottom, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e6f0a3', endColorstr='#dbf043', GradientType=0);
+	background-repeat: no-repeat;
+}
 
 .ContSubcategoriaMed {
 	height: 100px;
@@ -871,5 +880,37 @@ float:right;
 	background-color: #d4d4d4;
 	-webkit-box-shadow: 0 0 5px black, inset 0 0 2px black;
 	box-shadow: 0 0 5px black, inset 0 0 2px black;
+
 	
+}
+
+
+
+.Contacto {
+	margin:  0 auto!important;
+	float: none;
+	display: block;
+}
+
+
+
+.BarraBuscar {
+	padding: 3px 5px 5px 80px;
+	background: url(../img/search.png), #aaa;
+	background-repeat: no-repeat;
+	box-shadow: inset 1px 1px 3px gray;
+	border: solid 1px gray;
+	border-radius: 20px;
+}
+.BarraBuscar:hover {
+	padding: 3px 5px 5px 80px;
+	background: url(../img/search.png), #dbdbdb;
+	background-repeat: no-repeat;
+
+}
+.BarraBuscar:focus {
+	padding: 3px 5px 5px 80px;
+	background: url(../img/search.png), #edeaea;
+	background-repeat: no-repeat;
+
 }

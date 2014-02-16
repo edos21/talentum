@@ -15,8 +15,15 @@
 			'estado'=>$row['estado']);
 	}
   foreach($materiales as $material): ?>
+    
     <p>Precio del <?php echo $material['nombre']; ?></p>
     <p><?php echo $material['precio']; ?> $
-      <img src="img/Flecha<?php echo $material['estado']; ?>.png" alt="">
+      <img src="Flecha<?php echo $material['estado'];?>.png" alt="">
+      
     </p>
-  <?php endforeach; ?>
+    
+  <?php 
+  
+  endforeach;
+  
+    ?>

@@ -25,7 +25,7 @@ include '../lib/seguridad.php';
 			'correo' => $row['correo']);
 	}
 
-include '../includes/header.html'; ?>
+include '../includes/header.php'; ?>
 
 <form action="modificaMovimiento.php" method="post">
 	<label>Correo del cliente a Modificar</label>

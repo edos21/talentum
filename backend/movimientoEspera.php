@@ -77,7 +77,7 @@ while ($row = $s->fetch()) {
 		'monto' => $row['monto']);
 }
 
-include '../includes/header.html';
+include '../includes/header.php';
 ?>
 
 	<p><b>Articulos en espera</b></p>

@@ -59,11 +59,11 @@
 
 				header( "refresh:5;url=index.php" )
 			?>
-				
+		<?php include 'includes/header.php'?>				
 				<h2>Registro Satisfactorio</h2><br>
 				<p>El navegador lo redireccionara automaticamente en 5 segundos</p>
 				<a href="./">Volver al inicio</a>
-
+		<?php include 'includes/footer.php'?>
 			<?php
 			}
 

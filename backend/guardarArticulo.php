@@ -23,7 +23,7 @@ if($articulo == "" || $categoria == "" || $subcategoria == "" || $joya1 == "" ||
 	?>
 <?php
 	
-	include ('../includes/header.html');
+	include ('../includes/header.php');
 
 ?>
 	<center>
@@ -83,7 +83,7 @@ if($articulo == "" || $categoria == "" || $subcategoria == "" || $joya1 == "" ||
 		?>
 <?php
 	
-	include ('../includes/header.html');
+	include ('../includes/header.php');
 
 ?>
 			<h2>Articulo Guardado</h2><br>
